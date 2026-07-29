@@ -23,7 +23,7 @@ const benefits = [
     description:
       "TopTier funds the project so the host can bring padel to its community without committing capital.",
     icon: Banknote,
-    featured: true,
+    featured: false,
   },
   {
     title: "Development handled",
@@ -192,7 +192,7 @@ export default function HomePage() {
             <Reveal delay={0.12}>
               <div className="max-w-xl">
                 <p className="text-sm font-semibold uppercase tracking-wide text-[#005EA8]">
-                  Why Padel?
+                  Why Padel
                 </p>
 
                 <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
@@ -227,8 +227,8 @@ export default function HomePage() {
       </section>
 
       {/* Value proposition */}
-      <section className="relative overflow-hidden bg-[#E6F3FF] py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(0,119,200,0.16),_transparent_32%)]" />
+      <section className="relative overflow-hidden bg-blue-50 py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(37,99,235,0.16),_transparent_32%)]" />
 
         <Container>
           <div className="relative">
@@ -247,7 +247,7 @@ export default function HomePage() {
                 return (
                   <Reveal key={benefit.title} delay={index * 0.08}>
                     <div
-                      className={`group h-full rounded-3xl border p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                      className={`group h-full rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#99CC33]/60 hover:ring-1 hover:ring-[#99CC33]/25 hover:shadow-xl ${
                         benefit.featured
                           ? "border-[#99CC33]/50 bg-white ring-1 ring-[#99CC33]/30"
                           : "border-slate-200 bg-white"
@@ -280,8 +280,8 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="relative overflow-hidden bg-[#004B87] py-28 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(153,204,51,0.18),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(0,119,200,0.32),_transparent_36%)]" />
+      <section className="relative overflow-hidden bg-slate-950 py-28 text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(153,204,51,0.2),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.12),_transparent_34%)]" />
 
         <Container>
           <div className="relative grid gap-16 lg:grid-cols-[0.85fr_1.15fr]">

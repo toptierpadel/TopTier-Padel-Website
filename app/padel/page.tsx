@@ -1,292 +1,282 @@
 import Image from "next/image";
-import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
-import { SectionHeader } from "@/components/SectionHeader";
-
-const benefits = [
-  {
-    title: "Accessible for new players",
-    description:
-      "Padel is easier to pick up than many traditional racket sports, which makes it attractive for students, members, families, and casual players.",
-  },
-  {
-    title: "Highly social format",
-    description:
-      "Usually played in doubles, padel naturally encourages teamwork, communication, and community participation.",
-  },
-  {
-    title: "Strong community use",
-    description:
-      "A padel facility can serve more than one group: students, staff, club members, families, local players, coaches, and event participants.",
-  },
-  {
-    title: "Growing demand",
-    description:
-      "Padel’s rapid growth makes it a compelling addition for institutions and clubs looking to modernize their sports offering.",
-  },
-  {
-    title: "Compact sports infrastructure",
-    description:
-      "Padel courts can create high usage from a relatively efficient footprint, making them well-suited to host sites with available space.",
-  },
-  {
-    title: "Revenue and engagement potential",
-    description:
-      "Through bookings, coaching, events, and community play, padel can support both participation and long-term commercial value.",
-  },
-];
-
-const audiences = [
-  {
-    title: "For schools and universities",
-    description:
-      "Padel gives students access to a modern, inclusive sport that supports wellbeing, recreation, and campus life. It can also strengthen ties between the institution and the surrounding community.",
-  },
-  {
-    title: "For sports clubs",
-    description:
-      "Padel helps clubs expand their offering, attract new members, increase site activity, and create new reasons for members and local players to spend time at the club.",
-  },
-];
+import { Reveal } from "@/components/Reveal";
 
 export const metadata = {
-  title: "What Is Padel? | TopTier Padel",
+  title: "Why Padel | TopTier Padel",
   description:
-    "Learn what padel is, why it is growing quickly, and why it works well for schools, universities, sports clubs, and community sports environments.",
+    "Learn what padel is, why it is growing so quickly, and why it is a natural fit for schools, universities, and sports clubs.",
 };
 
-export default function ProductPage() {
+const padelStats = [
+  {
+    stat: "1M",
+    label: "people now playing in Britain",
+    description:
+      "Padel has moved quickly from a niche racket sport to something people are actively looking for. The LTA now estimates that one million adults and juniors are playing padel across Britain.",
+  },
+  {
+    stat: "1,825",
+    label: "courts across Britain",
+    description:
+      "The court network is expanding fast, with padel now available across hundreds of venues. That growth matters because every new court makes the sport more familiar, visible, and easier to try.",
+  },
+  {
+    stat: "77K+",
+    label: "courts worldwide",
+    description:
+      "This is not just a UK trend. The International Padel Federation reports more than 77,000 courts globally, spread across 150 nations.",
+  },
+];
+
+const fitSections = [
+  {
+    title: "Schools",
+    description:
+      "Students do not need years of coaching before they can enjoy padel. It is quick to understand, usually played in doubles, and works well for PE, after-school sessions, staff use, holiday programmes, and family or community access outside school hours.",
+  },
+  {
+    title: "Universities",
+    description:
+      "Padel fits naturally into campus life: easy to try with friends, social enough for societies and casual sport, and competitive enough for leagues, coaching, and inter-university play. It gives students another reason to stay active and spend time on campus.",
+  },
+  {
+    title: "Sports clubs",
+    description:
+      "For clubs, padel adds a sport that feels fresh without feeling intimidating. It can sit alongside tennis, football, cricket, rugby, golf, or fitness facilities, helping members bring friends, play more often, and use the club in new ways.",
+  },
+];
+
+export default function WhyPadelPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-slate-950 py-28 text-white">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/sports-padel.webp')",
-          }}
+      {/* Intro */}
+      <section className="relative overflow-hidden bg-slate-950 pb-24 pt-48 text-white">
+        <Image
+          src="/images/padel-and-balls.jpeg"
+          alt="Padel court and balls"
+          fill
+          priority
+          className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/35" />
+
+        <div className="absolute inset-0 bg-slate-950/55" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/55 to-slate-950/15" />
 
         <Container>
-          <div className="relative max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-wide text-[#99CC33]">
-              The sport
-            </p>
+          <Reveal>
+            <div className="relative max-w-4xl">
+              <p className="text-sm font-semibold uppercase tracking-wide text-[#99CC33]">
+                Why Padel
+              </p>
 
-            <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-7xl">
-              Why padel works for communities.
-            </h1>
+              <h1 className="mt-4 text-5xl font-bold tracking-tight text-white md:text-6xl">
+                The racket sport everyone suddenly wants to play.
+              </h1>
 
-            <p className="mt-7 max-w-3xl text-xl leading-9 text-white/85">
-              Padel is a fast-growing racket sport that combines the energy of
-              tennis with a more accessible, social format. For schools,
-              universities, and sports clubs, it creates a modern sports facility
-              that can serve students, members, families, and local players.
-            </p>
-
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[#99CC33] px-7 py-4 text-base font-bold text-slate-950 transition hover:bg-[#8abb2e]"
-              >
-                Request a Site Review
-              </a>
-
-              <Button href="/model" variant="secondary">
-                See Our Model
-              </Button>
+              <p className="mt-6 max-w-3xl text-xl leading-9 text-white/85">
+                Padel is fast, social, easy to pick up, and difficult not to
+                enjoy. That combination is why it has become one of the most
+                talked-about sports in the world — and why schools, universities,
+                and sports clubs are starting to take it seriously.
+              </p>
             </div>
-          </div>
+          </Reveal>
         </Container>
       </section>
 
       {/* What is padel */}
-      <section className="relative overflow-hidden bg-blue-50 py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(37,99,235,0.14),_transparent_32%)]" />
-
-        <Container>
-          <div className="relative grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="overflow-hidden rounded-[2rem] shadow-2xl">
-              <Image
-                src="/images/school-padel.jpeg"
-                alt="Young players on a padel court"
-                width={900}
-                height={600}
-                className="h-full w-full object-cover"
-              />
-            </div>
-
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">
-                What is padel?
-              </p>
-
-              <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                A social racket sport with a low barrier to entry.
-              </h2>
-
-              <div className="mt-6 space-y-5 text-lg leading-8 text-slate-700">
-                <p>
-                  Padel is typically played in doubles on an enclosed court. The
-                  game uses solid rackets, a lower-compression ball, and walls
-                  that keep rallies alive.
-                </p>
-
-                <p>
-                  The result is a sport that feels energetic and competitive,
-                  but is also approachable for beginners. Players can start
-                  enjoying rallies quickly, which makes padel especially strong
-                  for mixed-ability groups and community environments.
-                </p>
-
-                <p>
-                  For host sites, that accessibility matters. A padel facility is
-                  not just for elite athletes; it can be used by students,
-                  members, staff, families, beginners, experienced players, and
-                  local communities.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Benefits */}
       <section className="bg-white py-24">
         <Container>
-          <SectionHeader
-            eyebrow="Why it works"
-            title="A facility that creates participation, activity, and long-term value."
-            description="Padel is attractive because it combines sport, community, and commercial potential in a format that works across education and club environments."
-          />
-
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {benefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="rounded-3xl border border-slate-200 bg-slate-50 p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl"
-              >
-                <div className="mb-5 h-2 w-14 rounded-full bg-[#99CC33]" />
-
-                <h3 className="text-2xl font-bold tracking-tight text-slate-950">
-                  {benefit.title}
-                </h3>
-
-                <p className="mt-4 leading-7 text-slate-600">
-                  {benefit.description}
-                </p>
+          <div className="grid items-center gap-16 lg:grid-cols-[0.95fr_1.05fr]">
+            <Reveal>
+              <div className="overflow-hidden rounded-[1.75rem]">
+                <Image
+                  src="/images/padel-main.jpeg"
+                  alt="Players on a padel court"
+                  width={900}
+                  height={650}
+                  className="h-[34rem] w-full object-cover"
+                />
               </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+            </Reveal>
 
-      {/* Audience application */}
-      <section className="relative overflow-hidden bg-slate-950 py-24 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(153,204,51,0.2),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(37,99,235,0.16),_transparent_35%)]" />
+            <Reveal delay={0.12}>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                  What is padel?
+                </p>
 
-        <Container>
-          <div className="relative">
-            <SectionHeader
-              eyebrow="Where padel fits"
-              title="One sport, multiple host benefits."
-              description="The exact use case differs by host, but the underlying value is the same: more activity, stronger community engagement, and a modern sports asset."
-            />
+                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+                  Think tennis, squash, and doubles all mixed into one.
+                </h2>
 
-            <div className="mt-14 grid gap-8 lg:grid-cols-2">
-              {audiences.map((audience) => (
-                <div
-                  key={audience.title}
-                  className="rounded-[2rem] border border-white/10 bg-white/10 p-8 shadow-xl backdrop-blur"
-                >
-                  <h3 className="text-3xl font-bold tracking-tight">
-                    {audience.title}
-                  </h3>
+                <div className="mt-7 space-y-5 text-lg leading-8 text-slate-600">
+                  <p>
+                    Padel is a racket sport usually played as doubles on a
+                    smaller enclosed court. You hit the ball over the net like
+                    tennis, but the glass walls are part of the game, so rallies
+                    stay alive for longer.
+                  </p>
 
-                  <p className="mt-5 text-lg leading-8 text-white/80">
-                    {audience.description}
+                  <p>
+                    That is what makes it fun so quickly. Beginners can get a
+                    rally going without needing perfect technique, while stronger
+                    players still have plenty of room for speed, tactics,
+                    teamwork, and competitive play.
+                  </p>
+
+                  <p>
+                    It is also social by design. Four people play at once, the
+                    court is compact, and the game naturally creates quick,
+                    energetic points. For a lot of people, it feels less formal
+                    than tennis and more active than just going to the gym.
                   </p>
                 </div>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      {/* Why padel */}
+      <section className="bg-[#D9EEFF] py-24">
+        <Container>
+          <div className="mx-auto max-w-5xl">
+            <Reveal>
+              <div className="border-l-4 border-[#99CC33] pl-8">
+                <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                  Why is padel so popular?
+                </p>
+
+                <h2 className="mt-3 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+                  Because people can try it once and actually want to come back.
+                </h2>
+              </div>
+            </Reveal>
+
+            <div className="mt-14 grid gap-10 md:grid-cols-3">
+              {padelStats.map((item, index) => (
+                <Reveal key={item.stat} delay={index * 0.08}>
+                  <div>
+                    <p className="text-6xl font-black tracking-tight text-[#0077C8]">
+                      {item.stat}
+                    </p>
+
+                    <h3 className="mt-4 text-2xl font-bold tracking-tight text-slate-950">
+                      {item.label}
+                    </h3>
+
+                    <p className="mt-4 text-base leading-7 text-slate-700">
+                      {item.description}
+                    </p>
+                  </div>
+                </Reveal>
               ))}
             </div>
+
+            <Reveal delay={0.16}>
+              <div className="mt-16 rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
+                <h3 className="text-3xl font-bold tracking-tight text-slate-950">
+                  The simple reason people like it
+                </h3>
+
+                <div className="mt-6 grid gap-8 text-lg leading-8 text-slate-600 md:grid-cols-3">
+                  <p>
+                    <strong className="text-slate-950">It is approachable.</strong>{" "}
+                    You do not need to be an experienced racket-sport player to
+                    enjoy your first game.
+                  </p>
+
+                  <p>
+                    <strong className="text-slate-950">It is social.</strong>{" "}
+                    Doubles play makes it easy to bring friends, mix levels, and
+                    build groups around the sport.
+                  </p>
+
+                  <p>
+                    <strong className="text-slate-950">It is still competitive.</strong>{" "}
+                    As players improve, the game gets faster, smarter, and more
+                    tactical.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </Container>
       </section>
 
-      {/* Community section */}
+      {/* Where padel fits */}
       <section className="bg-white py-24">
         <Container>
-          <div className="grid items-center gap-14 lg:grid-cols-[1fr_0.95fr]">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">
-                Community impact
-              </p>
+          <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
+            <Reveal>
+              <div className="lg:sticky lg:top-32">
+                <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                  Where padel fits
+                </p>
 
-              <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                More than courts. A reason for people to gather.
-              </h2>
+                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+                  Easy to picture. Easy to use.
+                </h2>
 
-              <p className="mt-6 text-lg leading-8 text-slate-600">
-                The strongest padel facilities become community hubs. They
-                support casual play, coaching, school programming, member
-                activity, tournaments, social events, and public bookings.
-              </p>
-
-              <p className="mt-5 text-lg leading-8 text-slate-600">
-                That makes padel especially attractive for hosts that want a
-                facility with everyday use, not a sports asset that sits idle
-                outside limited training or match windows.
-              </p>
-
-              <div className="mt-8">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
-                >
-                  Discuss Your Site
-                </a>
+                <p className="mt-6 text-lg leading-8 text-slate-600">
+                  Padel works best in places where people already gather:
+                  schools, universities, and sports clubs. It gives those sites
+                  a sport that feels current, active, and welcoming without
+                  being difficult to explain.
+                </p>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="overflow-hidden rounded-[2rem] shadow-2xl">
-              <Image
-                src="/images/sports-padel.webp"
-                alt="Padel players on court"
-                width={900}
-                height={600}
-                className="h-full w-full object-cover"
-              />
-            </div>
+            <Reveal delay={0.12}>
+              <div className="divide-y divide-slate-200 border-y border-slate-200">
+                {fitSections.map((section) => (
+                  <div
+                    key={section.title}
+                    className="grid gap-6 py-10 md:grid-cols-[13rem_1fr]"
+                  >
+                    <h3 className="text-2xl font-bold tracking-tight text-slate-950">
+                      {section.title}
+                    </h3>
+
+                    <p className="text-lg leading-8 text-slate-600">
+                      {section.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </Container>
       </section>
 
-      {/* Final CTA */}
-      <section className="bg-blue-50 py-24">
+      {/* CTA */}
+      <section className="bg-[#004B87] py-20 text-white">
         <Container>
-          <div className="rounded-[2rem] bg-slate-950 px-6 py-16 text-center text-white md:px-12">
-            <p className="text-sm font-semibold uppercase tracking-wide text-[#99CC33]">
-              Bring padel to your site
-            </p>
+          <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-wide text-[#99CC33]">
+                Bring padel to your site
+              </p>
 
-            <h2 className="mx-auto mt-3 max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
-              Have space that could become a padel facility?
-            </h2>
+              <h2 className="mt-3 text-4xl font-bold tracking-tight">
+                Want to see whether padel could work at your site?
+              </h2>
 
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/75">
-              TopTier Padel funds, develops, manages, and maintains premium
-              padel facilities for suitable host sites across the UK.
-            </p>
-
-            <div className="mt-8">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[#99CC33] px-7 py-4 text-base font-bold text-slate-950 transition hover:bg-[#8abb2e]"
-              >
-                Request a Site Review
-              </a>
+              <p className="mt-4 text-lg leading-8 text-white/80">
+                TopTier Padel helps schools, universities, and sports clubs turn
+                suitable space into professionally developed and managed padel
+                facilities.
+              </p>
             </div>
+
+            <a
+              href="/contact"
+              className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#99CC33] px-7 py-4 text-base font-bold text-slate-950 transition hover:bg-[#8abb2e]"
+            >
+              Request a Site Review
+            </a>
           </div>
         </Container>
       </section>
