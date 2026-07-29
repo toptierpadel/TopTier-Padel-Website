@@ -13,7 +13,8 @@ const partnerItems = [
 export function Navbar() {
   const pathname = usePathname();
 
-  const isLightPage = pathname === "/padel";
+  const lightNavPages: string[] = [];
+  const isLightPage = lightNavPages.includes(pathname);
 
   const navTextClass = isLightPage
     ? "text-slate-950 hover:text-[#0077C8]"
