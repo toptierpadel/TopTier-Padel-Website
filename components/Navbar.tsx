@@ -13,22 +13,30 @@ const partnerItems = [
 export function Navbar() {
   const pathname = usePathname();
 
-  const lightNavPages: string[] = [];
-  const isLightPage = lightNavPages.includes(pathname);
+  const lightBackgroundPages = [
+    "/model",
+    "/schools",
+    "/sports-clubs",
+    "/faqs",
+    "/about-us",
+    "/contact",
+  ];
 
-  const navTextClass = isLightPage
+  const isLightBackgroundPage = lightBackgroundPages.includes(pathname);
+
+  const navTextClass = isLightBackgroundPage
     ? "text-slate-950 hover:text-[#0077C8]"
     : "text-white/90 hover:text-white";
 
-  const contactClass = isLightPage
+  const contactClass = isLightBackgroundPage
     ? "bg-slate-950 text-white hover:bg-slate-800"
     : "bg-white text-slate-950 hover:bg-slate-100";
 
-  const dropdownClass = isLightPage
+  const dropdownClass = isLightBackgroundPage
     ? "border-slate-200 bg-white text-slate-950 shadow-2xl"
     : "border-white/15 bg-slate-950/65 text-white shadow-2xl backdrop-blur-xl";
 
-  const dropdownItemClass = isLightPage
+  const dropdownItemClass = isLightBackgroundPage
     ? "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
     : "text-white/85 hover:bg-white/10 hover:text-white";
 
@@ -39,7 +47,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center pt-6">
             <Image
               src={
-                isLightPage
+                isLightBackgroundPage
                   ? "/images/toptier-logo-black.png"
                   : "/images/toptier-logo-white.png"
               }
@@ -52,13 +60,6 @@ export function Navbar() {
           </Link>
 
           <div className="hidden items-center gap-10 md:flex">
-            <Link
-              href="/padel"
-              className={`text-lg font-semibold transition ${navTextClass}`}
-            >
-              Why Padel
-            </Link>
-
             <Link
               href="/model"
               className={`text-lg font-semibold transition ${navTextClass}`}
@@ -88,6 +89,13 @@ export function Navbar() {
                 ))}
               </div>
             </div>
+
+            <Link
+              href="/faqs"
+              className={`text-lg font-semibold transition ${navTextClass}`}
+            >
+              FAQs
+            </Link>
 
             <Link
               href="/about-us"

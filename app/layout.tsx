@@ -4,9 +4,9 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Top-Tier Padel | Turnkey Padel Courts for Education",
+  title: "Top-Tier Padel | Padel Courts for Education & Sport",
   description:
-    "Top-Tier Padel helps schools and universities design, finance, install, and manage high-quality padel facilities.",
+    "Top-Tier Padel helps schools, universities and sports clubs fund, construct, and manage high-quality padel facilities.",
 };
 
 export default function RootLayout({

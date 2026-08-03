@@ -11,125 +11,141 @@ export const metadata = {
 const team = [
   {
     name: "Alejandro Pesquero",
-    role: "Founder & CFO",
+    role: "Founder & CEO",
     image: "/images/alejandro.jpg",
     bio:
-      "Born and raised in Spain, Alejandro founded TopTier Padel out of a love for the sport and a belief that padel can grow meaningfully across the UK. He advises a padel club in South London and has been hired as the manager of a padel club in Lincolnshire, giving him direct experience in the market and strong industry relationships.",
+      "Born and raised in Spain, Alejandro founded TopTier Padel out of a love for the sport and a belief that padel can grow meaningfully across the UK. He advises a padel club in South London and has been hired as the manager of a padel club in Lincolnshire, giving him direct market experience and strong industry relationships.",
+    links: {
+    linkedin: "https://www.linkedin.com/in/alejandro-pesquero-martin/",
+    email: "mailto:alejandro@top-tierpadel.com",
+    },
   },
   {
     name: "Joe Booth",
     role: "Director of Operations",
     image: "/images/joe.jpg",
+    imagePosition: "object-[center_15%]",
     bio:
-      "Joe is a creative strategist and consultant specialising in executive recruitment, and business development across the internation education and padel sectors. Based in the UK, he helps schools, operators, and organisations unlock new opportunities — from attracting senior leaders to developing padel clubs through smart, risk‑sharing site acquisition models. Known for his collaborative approach and sharp eye for engaging, professional content, Joe blends insight, creativity, and commercial thinking to deliver ideas that inspire action and drive growth.",
+      "Joe is a creative strategist and consultant with experience across executive recruitment, business development, international education, and the padel sector. At TopTier Padel, he supports operations, site development, and partner relationships, helping turn promising locations into practical club opportunities ",
   },
 ];
 
 export default function AboutUsPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-slate-950 pb-24 pt-48 text-white">
+        {/* Origin Story */}
+        <section className="relative overflow-hidden bg-white pb-28 pt-48">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(153,204,51,0.16),transparent_28%),radial-gradient(circle_at_82%_18%,rgba(0,119,200,0.14),transparent_30%)]" />
+        <div className="absolute left-1/2 top-24 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full border border-slate-200/70" />
+        <div className="absolute left-1/2 top-36 h-[24rem] w-[24rem] -translate-x-1/2 rounded-full border border-slate-200/70" />
+
         <Container>
-          <Reveal>
-            <div className="max-w-4xl">
-              <p className="text-sm font-semibold uppercase tracking-wide text-[#99CC33]">
-                About Us
-              </p>
-
-              <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
-                Bringing padel to more places, without making it complicated for
-                the host.
-              </h1>
-
-              <p className="mt-6 max-w-3xl text-xl leading-9 text-white/80">
-                TopTier Padel was created to help schools, universities, and
-                sports clubs bring padel to their communities through a fully
-                funded, professionally managed model.
-              </p>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
-
-        {/* Philosophy */}
-        <section className="bg-white py-24">
-        <Container>
-            <div className="mx-auto max-w-5xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
-                Our philosophy
-            </p>
-
-            <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                Padel should be easy to access, easy to enjoy, and easy for host sites
-                to offer.
-            </h2>
-
-            <div className="mx-auto mt-8 max-w-3xl space-y-5 text-lg leading-8 text-slate-600">
-                <p>
-                Padel is growing because people genuinely enjoy playing it. It is
-                social, quick to learn, and welcoming to people who may not already
-                see themselves as racket-sport players.
+            <Reveal>
+            <div className="relative mx-auto max-w-5xl text-center">
+                <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                About TopTier
                 </p>
 
-                <p>
-                But bringing padel to a school, university, or sports club is not just
-                about installing courts. The facility has to be funded, planned,
-                built, maintained, booked, and managed properly over time.
-                </p>
+                <h1 className="mx-auto mt-4 max-w-5xl text-5xl font-black tracking-tight text-slate-950 md:text-6xl">
+                From Spanish courts to UK campuses.
+                </h1>
 
-                <p>
-                Our approach is simple: the host provides suitable space, and TopTier
-                handles the difficult parts behind the scenes. That way the facility
-                can serve students, members, staff, families, and local players without
-                becoming another major project for the host to run internally.
+                <p className="mx-auto mt-6 max-w-4xl text-xl leading-9 text-slate-600">
+                Our founder Alejandro grew up in Spain, where padel was already part of everyday
+                sporting life, before attending school in the UK, where sport was
+                central to the daily routine but padel was nowhere to be found. That
+                contrast became the starting point for TopTier Padel. 
                 </p>
             </div>
+            </Reveal>
+
+            <div className="relative mx-auto mt-20 max-w-6xl lg:h-[66rem] xl:h-[62rem]">
+            {/* Spain panel */}
+            <div className="lg:absolute lg:left-0 lg:top-0 lg:w-[62%] xl:w-[64%]">
+                <Reveal delay={0.08}>
+                <div className="relative overflow-hidden rounded-[2.5rem] bg-[#005A8D] shadow-2xl">
+                    <div className="relative h-[34rem]">
+                    <div className="absolute inset-0 bg-[#005A8D]" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent" />
+                    <div className="absolute right-10 top-10 h-40 w-40 rounded-full bg-white/15 blur-3xl" />
+                    <div className="absolute bottom-10 left-10 h-44 w-44 rounded-full bg-[#99CC33]/25 blur-3xl" />
+
+                    <div className="absolute bottom-0 left-0 max-w-xl p-8 text-white md:p-10">
+                        <p className="text-sm font-semibold uppercase tracking-wide text-[#99CC33]">
+                        Spain
+                        </p>
+
+                        <h3 className="mt-3 text-4xl font-bold tracking-tight">
+                        Padel as part of everyday life.
+                        </h3>
+
+                        <p className="mt-4 text-lg leading-8 text-white/75">
+                        A beloved sport baked into friendships, families, clubs, and community.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                </Reveal>
             </div>
-        </Container>
-        </section>
 
-        {/* Our Story */}
-        <section className="bg-[#D9EEFF] py-24">
-        <Container>
-            <div className="mx-auto max-w-5xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
-                Our story
-            </p>
+            {/* UK panel */}
+            <div className="mt-8 lg:absolute lg:right-0 lg:top-24 lg:mt-0 lg:w-[54%] xl:top-24 xl:w-[52%]">
+                <Reveal delay={0.16}>
+                <div className="relative overflow-hidden rounded-[2.5rem] bg-slate-950 shadow-2xl">
+                    <div className="relative h-[30rem]">
+                    <div className="absolute inset-0 bg-slate-950" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent" />
+                    <div className="absolute left-10 top-10 h-40 w-40 rounded-full bg-[#0077C8]/35 blur-3xl" />
+                    <div className="absolute bottom-10 right-10 h-44 w-44 rounded-full bg-white/10 blur-3xl" />
 
-            <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                Born from two sporting cultures.
-            </h2>
+                    <div className="absolute bottom-0 left-0 max-w-lg p-8 text-white md:p-10">
+                        <p className="text-sm font-semibold uppercase tracking-wide text-[#99CC33]">
+                        UK schools & clubs
+                        </p>
 
-            <div className="mx-auto mt-8 max-w-3xl space-y-6 text-lg leading-8 text-slate-700">
-                <p>
-                TopTier Padel began with two very different experiences of growing up.
-                Our founder spent his childhood between Spain, where padel was already
-                a way of life, and a UK boarding school, where sport was central to
-                daily life but padel was nowhere to be found.
-                </p>
+                        <h3 className="mt-3 text-4xl font-bold tracking-tight">
+                        Sports culture. No padel.
+                        </h3>
 
-                <p>
-                That contrast stayed with him: he had seen firsthand how much a sport
-                could bring a community together, and he had also seen the untapped
-                potential sitting right there in British schools — sports facilities,
-                land, and a culture built around activity, just missing the right game.
-                </p>
+                        <p className="mt-4 text-lg leading-8 text-white/75">
+                        Facilities, land, and sporting communities already existed — just
+                        missing the right game.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                </Reveal>
+            </div>
 
-                <p>
-                That combination is what sparked TopTier Padel. By partnering directly
-                with schools, universities, and sports clubs, we set out to bring the
-                energy he grew up with in Spain into UK institutions already primed for
-                it — turning underused land into thriving padel courts.
-                </p>
+            {/* Mission card */}
+            <div className="relative z-10 mx-auto mt-8 max-w-3xl lg:absolute lg:left-1/2 lg:top-[41rem] lg:mt-0 lg:-translate-x-1/2">
+                <Reveal delay={0.24}>
+                <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-2xl md:p-10">
+                    <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                    The idea
+                    </p>
 
-                <p>
-                By handling everything from design and construction to day-to-day
-                management, we are building a growing network of facilities across the
-                country. What started as one person’s memory of two very different
-                worlds has become a genuine mission: bringing the best of both
-                together, one court at a time.
-                </p>
+                    <h3 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">
+                    Bring the best of both together.
+                    </h3>
+
+                    <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
+                    <p>
+                        That contrast is what sparked TopTier Padel. By partnering directly
+                        with schools, universities, and sports clubs, we set out to bring
+                        the energy of Spanish padel into UK institutions already primed for
+                        it.
+                    </p>
+
+                    <p>
+                        Our philosophy is simple: padel should be easy to access, easy to
+                        enjoy, and easy for host sites to offer. The host provides suitable
+                        space; TopTier handles the funding, development, management, and
+                        maintenance behind the scenes.
+                    </p>
+                    </div>
+                </div>
+                </Reveal>
             </div>
             </div>
         </Container>
@@ -145,7 +161,7 @@ export default function AboutUsPage() {
               </p>
 
               <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                Built by people who care about the sport and the model behind
+                Built by people who love padel and care about the model behind
                 it.
               </h2>
 
@@ -166,58 +182,74 @@ export default function AboutUsPage() {
                       src={person.image}
                       alt={person.name}
                       fill
-                      className="object-cover"
+                      className={`object-cover ${person.imagePosition ?? "object-center"}`}
                     />
                   </div>
 
-                  <div className="p-7">
+                  <div className="flex flex-col p-7">
+
                     <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
-                      {person.role}
+
+                        {person.role}
+
                     </p>
 
                     <h3 className="mt-2 text-3xl font-bold tracking-tight text-slate-950">
-                      {person.name}
+
+                        {person.name}
+
                     </h3>
 
                     <p className="mt-5 text-base leading-7 text-slate-600">
-                      {person.bio}
+
+                        {person.bio}
+
                     </p>
-                  </div>
+
+                    {"links" in person && person.links && (
+
+                        <div className="mt-auto flex gap-3 pt-8">
+
+                        <a
+
+                            href={person.links.linkedin}
+
+                            target="_blank"
+
+                            rel="noopener noreferrer"
+
+                            aria-label={`${person.name} LinkedIn`}
+
+                            className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-950 transition hover:border-[#0077C8] hover:bg-[#0077C8] hover:text-white"
+
+                        >
+
+                            <span className="text-sm font-black">in</span>
+
+                        </a>
+
+                        <a
+
+                            href={person.links.email}
+
+                            aria-label={`Email ${person.name}`}
+
+                            className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-950 transition hover:border-[#99CC33] hover:bg-[#99CC33] hover:text-slate-950"
+
+                        >
+
+                            <span className="text-lg font-black">@</span>
+
+                        </a>
+
+                        </div>
+
+                    )}
+
+                    </div>
                 </article>
               </Reveal>
             ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-[#005A8D] py-24 text-white">
-        <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto]">
-            <div className="max-w-4xl">
-              <p className="text-sm font-semibold uppercase tracking-wide text-[#99CC33]">
-                Work with TopTier
-              </p>
-
-              <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">
-                Interested in bringing padel to your site?
-              </h2>
-
-              <p className="mt-5 max-w-3xl text-lg leading-8 text-white/80">
-                Tell us about your school, university, or sports club. We’ll
-                review whether your space could support a professionally managed
-                TopTier Padel facility.
-              </p>
-            </div>
-
-            <div className="flex lg:justify-end">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[#99CC33] px-8 py-4 text-base font-bold text-slate-950 transition hover:bg-[#8abb2e]"
-              >
-                Request a Site Review
-              </a>
-            </div>
           </div>
         </Container>
       </section>
