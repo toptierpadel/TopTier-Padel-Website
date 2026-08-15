@@ -40,19 +40,19 @@ const modelSteps = [
     number: "01",
     title: "Host space",
     description:
-      "A school, university, or sports club has suitable space and an existing community.",
+      "A school, university, or sports club has suitable space, an existing community, and the opportunity to create new value from underused land.",
   },
   {
     number: "02",
-    title: "TopTier delivery",
+    title: "TopTier Padel delivery",
     description:
-      "TopTier handles funding, development, booking systems, operations, and maintenance.",
+      "TopTier Padel handles funding, development, booking systems, operations, and maintenance, with the partnership structured around host access and revenue participation.",
   },
   {
     number: "03",
     title: "Managed facility",
     description:
-      "The host receives agreed access while the facility is professionally managed long term.",
+      "The host receives agreed access while the facility is professionally managed long term, with potential revenue share from bookings, coaching, events, and wider community use.",
   },
 ];
 
@@ -129,7 +129,7 @@ export default function HomePage() {
                 </p>
 
                 <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-950 md:text-6xl">
-                  The host provides the space. TopTier handles the rest.
+                  The host provides the space. TopTier Padel handles the rest.
                 </h2>
 
                 <p className="mx-auto mt-6 max-w-3xl text-xl leading-9 text-slate-600">

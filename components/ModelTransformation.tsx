@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const stages = [
@@ -9,32 +10,41 @@ const stages = [
     title: "A site with potential.",
     description:
       "The host has suitable land, an existing community, and a place where sport already matters — but no padel facility yet.",
+    expandedDescription:
+      "At this stage, TopTier Padel looks beyond whether courts can physically fit. We review how the site could function day to day: access, visibility, surrounding demand, host priorities, safeguarding or member-use considerations, and whether the space can become a facility that creates long-term value rather than simply occupying spare land.",
     detail: "Host provides the space",
     bg: "bg-[#F5FAFF]",
     dark: false,
     targetId: "model-before",
+    image: "/images/model-space.png",
   },
   {
     stage: "During",
-    label: "TopTier delivery",
+    label: "TopTier Padel delivery",
     title: "We fund, build, and launch it.",
     description:
-      "TopTier coordinates the funding, design, development, court delivery, access systems, booking setup, and launch process.",
-    detail: "TopTier handles the project",
+      "TopTier Padel coordinates funding, development, court delivery, access systems, booking setup, and launch preparation.",
+    expandedDescription:
+      "Once the opportunity is clear, TopTier Padel leads the project delivery. That includes coordinating the investment, planning process, suppliers, court installation, booking infrastructure, access systems, and launch setup, so the host does not need to manage a specialist padel development internally.",
+    detail: "TopTier Padel handles the project",
     bg: "bg-slate-950",
     dark: true,
     targetId: "model-during",
+    image: "/images/model-delivery.png",
   },
   {
     stage: "After",
     label: "Managed facility",
     title: "A working padel facility.",
     description:
-      "The site receives a professionally managed facility with agreed host access, public or member bookings where appropriate, maintenance, and long-term oversight.",
-    detail: "A facility that keeps working",
+      "The host receives agreed access and potential revenue participation while the facility is professionally managed over time.",
+    expandedDescription:
+      "After launch, the facility is operated as a long-term asset. TopTier Padel manages bookings, upkeep, systems, maintenance, and day-to-day operations, while the host receives agreed access for its community and can participate in revenue generated through bookings, coaching, events, and wider use where appropriate.",
+    detail: "Access and revenue potential",
     bg: "bg-[#D9EEFF]",
     dark: false,
     targetId: "model-after",
+    image: "/images/model-managed.png",
   },
 ];
 
@@ -44,12 +54,8 @@ export function ModelTransformation() {
 
   function scrollToStage(targetId: string) {
     const element = document.getElementById(targetId);
-
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }
 
@@ -82,28 +88,20 @@ export function ModelTransformation() {
                   : "z-10 opacity-90 hover:-translate-y-2 hover:opacity-100"
               }`}
             >
-              <div
-                className={`relative h-[22rem] overflow-hidden ${
-                  item.dark ? "bg-slate-900" : item.bg
-                }`}
-              >
-                <div className={`absolute inset-0 ${item.bg}`} />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent" />
+              <div className="relative h-[22rem] overflow-hidden bg-slate-950">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
 
-                <div className="absolute left-1/2 top-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-[3rem] border-2 border-white/25" />
-                <div className="absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-[2rem] border-2 border-white/20" />
-
-                <div className="absolute inset-x-0 top-20 text-center">
-                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/45">
-                    Image placeholder
-                  </p>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/45 to-slate-950/10" />
 
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-sm font-semibold uppercase tracking-wide text-[#99CC33]">
                     {item.stage}
                   </p>
-
                   <h3 className="mt-2 text-3xl font-black tracking-tight text-white">
                     {item.title}
                   </h3>
@@ -152,7 +150,7 @@ export function ModelTransformation() {
         </h3>
 
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-          {active.description}
+          {active.expandedDescription}
         </p>
       </div>
     </div>

@@ -80,10 +80,10 @@ export default function SchoolsPage() {
               </div>
 
               <p className="mx-auto max-w-3xl text-xl leading-9 text-slate-600">
-                TopTier builds the model around the institution. Student-priority access,
+                TopTier Padel builds the model around the institution. Student-priority access,
                 timetable windows, staff use, society bookings, community access, and
                 safeguarding requirements can all be structured around how the site already
-                operates. TopTier handles the funding, development coordination, booking
+                operates. Toptier Padel handles the funding, development coordination, booking
                 systems, access setup, maintenance, and long-term management, so the school
                 or university can offer padel without needing to become a padel operator
                 itself.
@@ -91,21 +91,32 @@ export default function SchoolsPage() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.22}>
-            <div className="mx-auto mt-24 max-w-5xl text-center">
-              <div className="mx-auto h-px w-40 bg-slate-200" />
+        <Reveal delay={0.22}>
+          <div className="mx-auto mt-24 max-w-5xl text-center">
+            <div className="mx-auto h-px w-40 bg-slate-200" />
 
-              <p className="mx-auto mt-8 text-2xl font-black leading-10 tracking-tight text-slate-950 md:text-3xl">
-                From available campus space to a facility students actually use.
-              </p>
+            <p className="mx-auto mt-8 text-2xl font-black leading-10 tracking-tight text-slate-950 md:text-3xl">
+              From available campus space to a facility students actually use.
+            </p>
 
-              <p className="mx-auto mt-6 max-w-3xl text-xl leading-9 text-slate-600">
-                A clear path from underused school or university land to a professionally
-                managed padel facility that supports participation, wellbeing, and wider
-                campus activity.
-              </p>
-            </div>
-          </Reveal>
+            <p className="mx-auto mt-6 max-w-3xl text-xl leading-9 text-slate-600">
+              A clear path from underused school or university land to a professionally
+              managed padel facility that supports participation, wellbeing, and wider
+              campus activity.
+            </p>
+
+            <p className="mx-auto mt-8 text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+              Interested in bringing padel to your campus?{" "}
+              <a
+                href="/contact"
+                className="text-slate-950 underline decoration-slate-300 underline-offset-4 transition hover:text-[#0077C8] hover:decoration-[#0077C8]"
+              >
+                Get in touch
+              </a>
+              .
+            </p>
+          </div>
+        </Reveal>
 
         </Container>
       </section>

@@ -24,6 +24,11 @@ const questions = [
       "The court is smaller, the walls are part of play, the serve is underarm, and the game is usually doubles. That makes padel feel more compact, social, and accessible while still rewarding skill as players improve.",
   },
   {
+    question: "How much space is needed for a padel court?",
+    answer:
+      "A standard padel court is 20 metres by 10 metres. As a useful reference point, roughly three padel courts can fit into the space of one tennis court, which is one reason padel can work well for schools, universities, and sports clubs with underused land.",
+  },
+  {
     question: "Why does the smaller court matter?",
     answer:
       "The compact footprint is one of padel’s biggest advantages. It creates a lively playing environment and allows host sites to turn underused land into a visible, high-use sports facility without needing the same space as larger traditional sports.",
@@ -46,22 +51,22 @@ const questions = [
   {
     question: "What does TopTier Padel actually do?",
     answer:
-      "TopTier Padel funds, develops, manages, and maintains padel facilities for suitable host sites. The host provides the space and local context; TopTier handles the work required to turn that space into a professionally run facility.",
+      "TopTier Padel funds, develops, manages, and maintains padel facilities for suitable host sites. The host provides the land; TopTier Padel handles the work required to turn that space into a professionally run facility.",
   },
   {
     question: "Is there any capital investment required from the host?",
     answer:
-      "No. The model is designed so the host does not need to fund the development of the facility. TopTier covers the core investment and takes responsibility for delivering and managing the project.",
+      "No. The host does not have to invest a single pound. TopTier Padel covers the core investment required to develop the facility and takes responsibility for delivering and managing the project.",
   },
   {
     question: "What does the host need to provide?",
     answer:
-      "The host usually provides suitable land or underused space, along with practical input around access, existing site use, and how the facility should fit into the school, university, or club environment.",
+      "The host needs to provide underused land. TopTier Padel then reviews whether that land can practically support a padel facility and how the project could be structured around the host’s site.",
   },
   {
     question: "Who manages the facility once it is open?",
     answer:
-      "TopTier manages the facility after launch. That includes bookings, access systems, maintenance, upkeep, operational oversight, and the day-to-day work needed to keep the courts running properly.",
+      "TopTier Padel manages the facility after launch. That includes bookings, access systems, maintenance, upkeep, operational oversight, and the day-to-day work needed to keep the courts running properly.",
   },
   {
     question: "Does the host get priority access?",
@@ -69,14 +74,14 @@ const questions = [
       "Yes. Host access is agreed as part of the partnership. For a school or university, that might mean priority use for students, staff, PE, enrichment, societies, or campus sport. For a sports club, that might mean member-priority sessions, club events, coaching, or preferential access.",
   },
   {
-    question: "Can the facility be used by the wider community?",
+    question: "How do you manage safeguarding in schools?",
     answer:
-      "Where appropriate, yes. Outside agreed host-priority windows, the facility can be made available to approved external users through a managed booking system. The exact structure depends on the site, access arrangements, safeguarding requirements, and the host’s preferences.",
+      "TopTier Padel works to understand each school’s safeguarding requirements and strictly follow the school’s safeguarding policies and procedures. The padel club timetable, access routes, booking structure, and wider use of the facility can be adapted to comply with the school’s requirements.",
   },
   {
     question: "How does this work for schools?",
     answer:
-      "For schools, the model is built around student access, safeguarding, and the school day. The facility can support PE, games sessions, after-school clubs, staff use, holiday programmes, and carefully managed community access outside designated school use.",
+      "For schools, the model is built around student access, safeguarding, and the school day. The facility can support PE, games sessions, after-school clubs, staff use, holiday programmes, and carefully managed access outside designated school use where appropriate.",
   },
   {
     question: "How does this work for universities?",
@@ -86,22 +91,22 @@ const questions = [
   {
     question: "How does this work for sports clubs?",
     answer:
-      "For sports clubs, padel can strengthen the member offer, bring more activity to the site, support coaching and events, and make better use of underused land. The model can be structured around member-priority access while still allowing managed external bookings where appropriate.",
+      "For sports clubs, padel can strengthen the member offer, bring more activity to the site, support coaching and events, and make better use of underused land. The model can be structured around member-priority access while TopTier Padel handles the operational burden.",
   },
   {
     question: "Who handles planning, construction, and suppliers?",
     answer:
-      "TopTier coordinates the development process. That can include feasibility review, design, planning coordination, court delivery, supplier management, booking setup, access systems, and launch preparation.",
+      "TopTier Padel coordinates the development process. That can include feasibility review, design, planning coordination, court delivery, supplier management, booking setup, access systems, and launch preparation.",
   },
   {
     question: "What kind of space is suitable?",
     answer:
-      "A suitable site could be underused land, hardstanding, part of an existing sports area, or another space with practical access and enough room for a padel facility. Every site is different, so the first step is reviewing whether the space can work safely and practically.",
+      "A suitable site is usually underused land with enough room for one or more padel courts, practical access, and a host community that could benefit from the facility. Every site is different, so the first step is reviewing whether the land can work safely and practically.",
   },
   {
     question: "How do we find out whether our site could work?",
     answer:
-      "The process starts with a site review. Share the basics of your school, university, or sports club site, and TopTier can assess whether the space, access, likely use, and partnership structure could make sense.",
+      "The process starts with a site review. Share the basics of your school, university, or sports club site, and TopTier Padel can assess whether the space, access, likely use, and partnership structure could make sense.",
   },
 ];
 
@@ -134,8 +139,8 @@ export default function FAQsPage() {
               </h1>
 
               <p className="mx-auto mt-6 max-w-3xl text-xl leading-9 text-slate-600">
-                Questions about the sport, the model, host access, operations,
-                and what it takes to bring a TopTier Padel facility to your
+                Questions about the sport, the model, host access, safeguarding,
+                operations, and what it takes to bring a TopTier Padel facility to your
                 site.
               </p>
             </div>

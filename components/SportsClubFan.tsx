@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const reasons = [
@@ -10,6 +11,7 @@ const reasons = [
       "Padel is usually played in doubles, so each booking naturally brings a group to the club — more members, more guests, and more social activity around the site.",
     advantage: "More people on site from every court.",
     bg: "bg-[#005A8D]",
+    image: "/images/doubles.png",
   },
   {
     label: "Compact footprint",
@@ -18,6 +20,7 @@ const reasons = [
       "Padel courts are compact compared with many traditional sports facilities, making them well suited to underused club land, awkward corners, or space that is not currently working hard enough.",
     advantage: "Turn limited land into visible member value.",
     bg: "bg-slate-950",
+    image: "/images/small-footprint.png",
   },
   {
     label: "Easy to start",
@@ -26,6 +29,7 @@ const reasons = [
       "The smaller court, walls, and accessible style of play help beginners enjoy a game quickly. That makes padel unusually good at turning curiosity into repeat bookings.",
     advantage: "Lower barrier to entry means more regular use.",
     bg: "bg-[#0077C8]",
+    image: "/images/fast-habits.png",
   },
   {
     label: "Broad appeal",
@@ -34,6 +38,7 @@ const reasons = [
       "Padel can work for juniors, adults, families, social players, and competitive members. That breadth matters for clubs trying to keep facilities active across the week.",
     advantage: "Useful across ages, abilities, and time slots.",
     bg: "bg-[#004B87]",
+    image: "/images/many-members.png",
   },
 ];
 
@@ -41,12 +46,12 @@ export function SportsClubFan() {
   const [activeIndex, setActiveIndex] = useState(0);
   const active = reasons[activeIndex];
 
-    const cardPositions = [
+  const cardPositions = [
     "left-[20%] top-[26%] -rotate-[10deg]",
     "left-[38%] top-[12%] -rotate-[4deg]",
     "left-[57%] top-[12%] rotate-[4deg]",
     "left-[75%] top-[26%] rotate-[10deg]",
-    ];
+  ];
 
   return (
     <div className="relative mx-auto mt-16 max-w-6xl">
@@ -71,21 +76,19 @@ export function SportsClubFan() {
                 cardPositions[index]
               } ${
                 isActive
-                    ? "z-50 scale-110 ring-4 ring-[#99CC33]/70"
-                    : "z-40 scale-95 opacity-85 hover:opacity-100"
+                  ? "z-50 scale-110 ring-4 ring-[#99CC33]/70"
+                  : "z-40 scale-95 opacity-85 hover:opacity-100"
               } ${reason.bg}`}
               aria-label={reason.title}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+              <Image
+                src={reason.image}
+                alt={reason.title}
+                fill
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
 
-              <div className="absolute inset-x-0 top-16 text-center">
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/35">
-                  Image placeholder
-                </p>
-                <p className="mt-5 text-7xl font-black text-white/15">
-                  {index + 1}
-                </p>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/45 to-slate-950/10" />
 
               <div className="absolute bottom-0 left-0 right-0 p-7 pb-9 text-white">
                 <p className="text-xs font-semibold uppercase tracking-wide text-[#99CC33]">

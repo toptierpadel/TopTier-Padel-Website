@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const reasons = [
@@ -10,6 +11,7 @@ const reasons = [
       "Padel has a lower barrier to entry than many racket sports. The smaller court, underarm serve, and longer rallies help students get into a game quickly, even if they have limited racket-sport experience.",
     advantage: "More students can participate confidently from the start.",
     bg: "bg-[#0077C8]",
+    image: "/images/high-five.png",
   },
   {
     label: "High participation",
@@ -18,6 +20,7 @@ const reasons = [
       "Because padel is usually played in doubles, each court naturally supports group play. That makes it well suited to PE, enrichment, societies, and social sport where participation matters.",
     advantage: "A compact court can support meaningful student activity.",
     bg: "bg-slate-950",
+    image: "/images/doubles.png",
   },
   {
     label: "Campus friendly",
@@ -26,14 +29,16 @@ const reasons = [
       "Padel’s compact enclosed-court format can make better use of underused school or university space without needing the scale of a traditional large sports facility.",
     advantage: "Turn available land into a visible, useful campus asset.",
     bg: "bg-[#005A8D]",
+    image: "/images/small-footprint.png",
   },
   {
     label: "Managed around you",
     title: "Built around school access.",
     description:
-      "The facility can be structured around agreed school or university priority use, with TopTier handling bookings, upkeep, access systems, and wider community use where appropriate.",
+      "The facility can be structured around agreed school or university priority use, with TopTier Padel handling bookings, upkeep, access systems, and wider community use where appropriate.",
     advantage: "Student use comes first, without adding operational burden.",
     bg: "bg-[#004B87]",
+    image: "/images/child-playing.png",
   },
 ];
 
@@ -81,16 +86,14 @@ export function SchoolsFan() {
               } ${reason.bg}`}
               aria-label={reason.title}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+              <Image
+                src={reason.image}
+                alt={reason.title}
+                fill
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
 
-              <div className="absolute inset-x-0 top-16 text-center">
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/35">
-                  Campus placeholder
-                </p>
-                <p className="mt-5 text-7xl font-black text-white/15">
-                  {index + 1}
-                </p>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/45 to-slate-950/10" />
 
               <div className="absolute bottom-0 left-0 right-0 p-7 pb-9 text-white">
                 <p className="text-xs font-semibold uppercase tracking-wide text-[#99CC33]">

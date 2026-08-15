@@ -99,9 +99,9 @@ export default function SportsClubsPage() {
               </div>
 
               <p className="mx-auto max-w-3xl text-xl leading-9 text-slate-600">
-                TopTier builds the model around the club. Member-priority access, coaching
+                TopTier Padel builds the model around the club. Member-priority access, coaching
                 windows, internal events, external bookings, and wider community use can all
-                be structured around the way the site already operates. TopTier handles the
+                be structured around the way the site already operates. TopTier Padel handles the
                 funding, development coordination, booking systems, access setup, maintenance,
                 and day-to-day management, so the club can benefit from padel without needing
                 to become a padel operator itself.
@@ -120,6 +120,17 @@ export default function SportsClubsPage() {
               <p className="mx-auto mt-6 max-w-3xl text-xl leading-9 text-slate-600">
                 A clear path from available club land to a professionally managed padel
                 facility that supports members, bookings, coaching, and wider site activity.
+              </p>
+
+              <p className="mx-auto mt-8 text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                Interested in bringing padel to your club?{" "}
+                <a
+                  href="/contact"
+                  className="text-slate-950 underline decoration-slate-300 underline-offset-4 transition hover:text-[#0077C8] hover:decoration-[#0077C8]"
+                >
+                  Get in touch
+                </a>
+                .
               </p>
             </div>
           </Reveal>
