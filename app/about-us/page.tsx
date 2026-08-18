@@ -12,7 +12,7 @@ const team = [
   {
     name: "Alejandro Pesquero",
     role: "Founder & CEO",
-    image: "/images/alejandro.jpg",
+    image: "/images/Alejandro.jpg",
     bio:
       "Born and raised in Spain, Alejandro founded TopTier Padel out of a love for the sport and a belief that padel can grow meaningfully across the UK. He advises a padel club in South London and was hired to manage the initial setup for a padel club in Lincolnshire, giving him direct market experience and strong industry relationships.",
     links: {
@@ -23,7 +23,7 @@ const team = [
   {
     name: "Joe Booth",
     role: "Director of Operations",
-    image: "/images/joe.jpg",
+    image: "/images/Joe.jpg",
     imagePosition: "object-[center_15%]",
     bio:
       "Joe is a creative strategist and consultant with experience across executive recruitment, business development, international education, and the padel sector. At TopTier Padel, he supports operations, site development, and partner relationships, helping turn promising locations into practical club opportunities.",
@@ -67,7 +67,7 @@ export default function AboutUsPage() {
                 <div className="relative overflow-hidden rounded-[2.5rem] bg-[#005A8D] shadow-2xl">
                   <div className="relative h-[34rem]">
                     <Image
-                      src="/images/english-school.png"
+                      src="/images/english-school.jpeg"
                       alt="School sport in the UK"
                       fill
                       className="object-cover"
@@ -101,7 +101,7 @@ export default function AboutUsPage() {
                 <div className="relative overflow-hidden rounded-[2.5rem] bg-slate-950 shadow-2xl">
                   <div className="relative h-[30rem]">
                     <Image
-                      src="/images/spanish-padel.png"
+                      src="/images/spanish-padel.jpeg"
                       alt="Padel courts in Spain"
                       fill
                       className="object-cover"

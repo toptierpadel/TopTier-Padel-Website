@@ -11,7 +11,7 @@ const reasons = [
       "Padel is usually played in doubles, so each booking naturally brings a group to the club — more members, more guests, and more social activity around the site.",
     advantage: "More people on site from every court.",
     bg: "bg-[#005A8D]",
-    image: "/images/doubles.png",
+    image: "/images/doubles.jpeg",
   },
   {
     label: "Compact footprint",
@@ -20,7 +20,7 @@ const reasons = [
       "Padel courts are compact compared with many traditional sports facilities, making them well suited to underused club land, awkward corners, or space that is not currently working hard enough.",
     advantage: "Turn limited land into visible member value.",
     bg: "bg-slate-950",
-    image: "/images/small-footprint.png",
+    image: "/images/small-footprint.jpg",
   },
   {
     label: "Easy to start",
@@ -29,7 +29,7 @@ const reasons = [
       "The smaller court, walls, and accessible style of play help beginners enjoy a game quickly. That makes padel unusually good at turning curiosity into repeat bookings.",
     advantage: "Lower barrier to entry means more regular use.",
     bg: "bg-[#0077C8]",
-    image: "/images/fast-habits.png",
+    image: "/images/fast-habits.jpeg",
   },
   {
     label: "Broad appeal",
@@ -38,7 +38,7 @@ const reasons = [
       "Padel can work for juniors, adults, families, social players, and competitive members. That breadth matters for clubs trying to keep facilities active across the week.",
     advantage: "Useful across ages, abilities, and time slots.",
     bg: "bg-[#004B87]",
-    image: "/images/many-members.png",
+    image: "/images/many-members.jpeg",
   },
 ];
 

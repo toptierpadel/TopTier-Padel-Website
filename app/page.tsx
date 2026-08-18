@@ -8,13 +8,13 @@ const audiences = [
   {
     title: "Schools & Universities",
     label: "For education",
-    image: "/images/school-padel.jpeg",
+    image: "/images/high-five.jpeg",
     description:
       "Bring a modern, accessible sport to campus while supporting student wellbeing, recreational opportunity, and community engagement.",
     points: [
       "Priority access during school or university hours",
       "A new facility for students, staff, and local users",
-      "Potential revenue participation with no capital investment required",
+      "Revenue participation with no capital investment required",
     ],
     href: "/schools",
     cta: "Explore education partnerships",
@@ -22,7 +22,7 @@ const audiences = [
   {
     title: "Sports Clubs",
     label: "For clubs",
-    image: "/images/sports-padel.webp",
+    image: "/images/doubles.jpeg",
     description:
       "Expand your club’s offering, attract new members, increase engagement, and create another revenue stream from underused space.",
     points: [
@@ -52,7 +52,7 @@ const modelSteps = [
     number: "03",
     title: "Managed facility",
     description:
-      "The host receives agreed access while the facility is professionally managed long term, with potential revenue share from bookings, coaching, events, and wider community use.",
+      "The host receives agreed access while the facility is professionally managed long term, with revenue share from bookings, coaching, events, and wider community use.",
   },
 ];
 

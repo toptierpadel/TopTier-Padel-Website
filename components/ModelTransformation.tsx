@@ -16,7 +16,7 @@ const stages = [
     bg: "bg-[#F5FAFF]",
     dark: false,
     targetId: "model-before",
-    image: "/images/model-space.png",
+    image: "/images/model-space.jpeg",
   },
   {
     stage: "During",
@@ -30,21 +30,21 @@ const stages = [
     bg: "bg-slate-950",
     dark: true,
     targetId: "model-during",
-    image: "/images/model-delivery.png",
+    image: "/images/model-delivery.jpeg",
   },
   {
     stage: "After",
     label: "Managed facility",
     title: "A working padel facility.",
     description:
-      "The host receives agreed access and potential revenue participation while the facility is professionally managed over time.",
+      "The host receives agreed access and revenue participation while the facility is professionally managed over time.",
     expandedDescription:
       "After launch, the facility is operated as a long-term asset. TopTier Padel manages bookings, upkeep, systems, maintenance, and day-to-day operations, while the host receives agreed access for its community and can participate in revenue generated through bookings, coaching, events, and wider use where appropriate.",
     detail: "Access and revenue potential",
     bg: "bg-[#D9EEFF]",
     dark: false,
     targetId: "model-after",
-    image: "/images/model-managed.png",
+    image: "/images/model-managed.jpeg",
   },
 ];
 

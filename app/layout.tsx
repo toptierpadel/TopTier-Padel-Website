@@ -9,6 +9,11 @@ export const metadata: Metadata = {
     "Top-Tier Padel helps schools, universities and sports clubs fund, construct, and manage high-quality padel facilities.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: {

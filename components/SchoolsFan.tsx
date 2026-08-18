@@ -11,7 +11,7 @@ const reasons = [
       "Padel has a lower barrier to entry than many racket sports. The smaller court, underarm serve, and longer rallies help students get into a game quickly, even if they have limited racket-sport experience.",
     advantage: "More students can participate confidently from the start.",
     bg: "bg-[#0077C8]",
-    image: "/images/high-five.png",
+    image: "/images/high-five.jpeg",
   },
   {
     label: "High participation",
@@ -20,7 +20,7 @@ const reasons = [
       "Because padel is usually played in doubles, each court naturally supports group play. That makes it well suited to PE, enrichment, societies, and social sport where participation matters.",
     advantage: "A compact court can support meaningful student activity.",
     bg: "bg-slate-950",
-    image: "/images/doubles.png",
+    image: "/images/doubles.jpeg",
   },
   {
     label: "Campus friendly",
@@ -29,7 +29,7 @@ const reasons = [
       "Padel’s compact enclosed-court format can make better use of underused school or university space without needing the scale of a traditional large sports facility.",
     advantage: "Turn available land into a visible, useful campus asset.",
     bg: "bg-[#005A8D]",
-    image: "/images/small-footprint.png",
+    image: "/images/small-footprint.jpg",
   },
   {
     label: "Managed around you",
@@ -38,7 +38,7 @@ const reasons = [
       "The facility can be structured around agreed school or university priority use, with TopTier Padel handling bookings, upkeep, access systems, and wider community use where appropriate.",
     advantage: "Student use comes first, without adding operational burden.",
     bg: "bg-[#004B87]",
-    image: "/images/child-playing.png",
+    image: "/images/child-playing.jpeg",
   },
 ];
 
