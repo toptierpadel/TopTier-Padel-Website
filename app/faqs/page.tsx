@@ -146,7 +146,6 @@ export default function FAQsPage() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.12}>
             <div className="relative mx-auto mt-24 max-w-5xl">
               <div className="border-y border-slate-200">
                 {questions.map((item, index) => (
@@ -181,7 +180,6 @@ export default function FAQsPage() {
                 ))}
               </div>
             </div>
-          </Reveal>
 
           <Reveal delay={0.18}>
             <div className="mx-auto mt-24 max-w-3xl text-center">
