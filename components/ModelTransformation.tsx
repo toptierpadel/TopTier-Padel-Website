@@ -16,7 +16,7 @@ const stages = [
     bg: "bg-[#F5FAFF]",
     dark: false,
     targetId: "model-before",
-    image: "/images/model-space.jpeg",
+    image: "/images/model-space-v2.jpeg",
   },
   {
     stage: "During",
@@ -44,7 +44,7 @@ const stages = [
     bg: "bg-[#D9EEFF]",
     dark: false,
     targetId: "model-after",
-    image: "/images/model-managed.jpeg",
+    image: "/images/model-managed-v2.jpeg",
   },
 ];
 
