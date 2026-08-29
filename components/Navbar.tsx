@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container } from "./Container";
 
 const partnerItems = [
@@ -15,6 +15,10 @@ export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const normalizedPathname = pathname.replace(/\/$/, "") || "/";
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   const lightBackgroundPages = [
     "/model",
@@ -151,7 +155,6 @@ export function Navbar() {
             <div className="flex flex-col gap-6 pt-8">
               <Link
                 href="/model"
-                onClick={() => setIsOpen(false)}
                 className="text-2xl font-bold transition hover:text-[#0077C8]"
               >
                 Our Model
@@ -165,7 +168,6 @@ export function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    onClick={() => setIsOpen(false)}
                     className="pl-4 text-xl font-semibold transition hover:text-[#0077C8]"
                   >
                     {item.label}
@@ -175,7 +177,6 @@ export function Navbar() {
 
               <Link
                 href="/faqs"
-                onClick={() => setIsOpen(false)}
                 className="text-2xl font-bold transition hover:text-[#0077C8]"
               >
                 FAQs
@@ -183,7 +184,6 @@ export function Navbar() {
 
               <Link
                 href="/about-us"
-                onClick={() => setIsOpen(false)}
                 className="text-2xl font-bold transition hover:text-[#0077C8]"
               >
                 About Us
@@ -191,7 +191,6 @@ export function Navbar() {
 
               <Link
                 href="/contact"
-                onClick={() => setIsOpen(false)}
                 className={`mt-6 inline-flex items-center justify-center rounded-full py-4 text-lg font-bold transition ${contactClass}`}
               >
                 Get in Touch
