@@ -23,7 +23,7 @@ const team = [
   {
     name: "Joe Booth",
     role: "Director of Operations",
-    image: "/images/Joe.jpg",
+    image: "/images/Joe.JPG",
     imagePosition: "object-[center_15%]",
     bio:
       "Joe is a creative strategist and consultant with experience across executive recruitment, business development, international education, and the padel sector. At TopTier Padel, he supports operations, site development, and partner relationships, helping turn promising locations into practical club opportunities.",
