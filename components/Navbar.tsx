@@ -14,6 +14,7 @@ const partnerItems = [
 export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const normalizedPathname = pathname.replace(/\/$/, "") || "/";
 
   const lightBackgroundPages = [
     "/model",
@@ -24,7 +25,7 @@ export function Navbar() {
     "/contact",
   ];
 
-  const isLightBackgroundPage = lightBackgroundPages.includes(pathname);
+  const isLightBackgroundPage = lightBackgroundPages.includes(normalizedPathname);
 
   const navTextClass = isLightBackgroundPage
     ? "text-slate-950 hover:text-[#0077C8]"
