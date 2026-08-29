@@ -94,7 +94,7 @@ export function ModelTransformation() {
                   alt={item.title}
                   fill
                   style={{ objectFit: "cover" }}
-                  className="transition duration-700 group-hover:scale-105"
+                  className="scale-110 transition duration-700 group-hover:scale-115"
                 />
 
                 <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
