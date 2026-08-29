@@ -16,7 +16,7 @@ const stages = [
     bg: "bg-[#F5FAFF]",
     dark: false,
     targetId: "model-before",
-    image: "/images/model-space-v2.jpeg",
+    image: "/images/model-space.jpeg",
   },
   {
     stage: "During",
@@ -44,7 +44,7 @@ const stages = [
     bg: "bg-[#D9EEFF]",
     dark: false,
     targetId: "model-after",
-    image: "/images/model-managed-v2.jpeg",
+    image: "/images/model-managed.jpeg",
   },
 ];
 
@@ -93,11 +93,10 @@ export function ModelTransformation() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  style={{ objectFit: "cover" }}
-                  className="transition duration-700 group-hover:scale-105"
+                  className="object-cover transition duration-700 group-hover:scale-105"
                 />
 
-                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/45 to-slate-950/10" />
 
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-sm font-semibold uppercase tracking-wide text-[#99CC33]">
