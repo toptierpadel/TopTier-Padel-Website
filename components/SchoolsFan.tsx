@@ -47,27 +47,27 @@ export function SchoolsFan() {
   const active = reasons[activeIndex];
 
   const cardPositions = [
-    "left-[20%] top-[26%] -rotate-[10deg]",
-    "left-[38%] top-[12%] -rotate-[4deg]",
-    "left-[57%] top-[12%] rotate-[4deg]",
-    "left-[75%] top-[26%] rotate-[10deg]",
+    "lg:left-[20%] lg:top-[26%] lg:-rotate-[10deg]",
+    "lg:left-[38%] lg:top-[12%] lg:-rotate-[4deg]",
+    "lg:left-[57%] lg:top-[12%] lg:rotate-[4deg]",
+    "lg:left-[75%] lg:top-[26%] lg:rotate-[10deg]",
   ];
 
   return (
     <div className="relative mx-auto mt-16 max-w-6xl">
       {/* timetable / campus background detail */}
-      <div className="absolute left-1/2 top-12 h-[34rem] w-[52rem] -translate-x-1/2 rounded-[4rem] border-2 border-slate-200/70" />
-      <div className="absolute left-1/2 top-28 h-[23rem] w-[40rem] -translate-x-1/2 rounded-[3rem] border-2 border-slate-200/55" />
+      <div className="absolute left-1/2 top-12 hidden h-[34rem] w-[52rem] -translate-x-1/2 rounded-[4rem] border-2 border-slate-200/70 lg:block" />
+      <div className="absolute left-1/2 top-28 hidden h-[23rem] w-[40rem] -translate-x-1/2 rounded-[3rem] border-2 border-slate-200/55 lg:block" />
       <div className="absolute left-[13%] top-24 h-72 w-72 rounded-full bg-[#99CC33]/12 blur-3xl" />
       <div className="absolute right-[10%] top-20 h-80 w-80 rounded-full bg-[#0077C8]/12 blur-3xl" />
 
       {/* subtle timetable lines */}
-      <div className="absolute left-[18%] top-36 h-px w-[64%] bg-slate-200/60" />
-      <div className="absolute left-[24%] top-52 h-px w-[52%] bg-slate-200/50" />
-      <div className="absolute left-[30%] top-68 h-px w-[40%] bg-slate-200/40" />
+      <div className="absolute left-[18%] top-36 hidden h-px w-[64%] bg-slate-200/60 lg:block" />
+      <div className="absolute left-[24%] top-52 hidden h-px w-[52%] bg-slate-200/50 lg:block" />
+      <div className="absolute left-[30%] top-68 hidden h-px w-[40%] bg-slate-200/40 lg:block" />
 
       {/* fan */}
-      <div className="relative z-30 h-[37rem]">
+      <div className="relative z-30 h-[24rem] md:h-[27rem] lg:h-[37rem]">
         {reasons.map((reason, index) => {
           const isActive = activeIndex === index;
 
@@ -77,13 +77,13 @@ export function SchoolsFan() {
               onMouseEnter={() => setActiveIndex(index)}
               onFocus={() => setActiveIndex(index)}
               onClick={() => setActiveIndex(index)}
-              className={`absolute h-[22rem] w-[16rem] -translate-x-1/2 overflow-hidden rounded-[2rem] text-left shadow-2xl transition-all duration-300 ease-out md:h-[25rem] md:w-[18rem] ${
+              className={`relative mx-auto h-[22rem] w-[16rem] overflow-hidden rounded-[2rem] text-left shadow-2xl transition-all duration-300 ease-out md:h-[25rem] md:w-[18rem] lg:absolute lg:left-1/2 lg:-translate-x-1/2 ${
                 cardPositions[index]
               } ${
                 isActive
-                  ? "z-50 scale-110 ring-4 ring-[#99CC33]/70"
-                  : "z-40 scale-95 opacity-85 hover:opacity-100"
-              } ${reason.bg}`}
+                  ? "z-50 scale-105 ring-4 ring-[#99CC33]/70 opacity-100"
+                  : "scale-95 opacity-85 hover:opacity-100"
+              } ${reason.bg} ${isActive ? "block" : "hidden lg:block"}`}
               aria-label={reason.title}
             >
               <Image
@@ -111,7 +111,7 @@ export function SchoolsFan() {
       </div>
 
       {/* active explanation */}
-      <div className="relative z-20 mx-auto -mt-28 max-w-3xl rounded-[2rem] border border-slate-200 bg-white/95 p-7 text-center shadow-xl backdrop-blur md:p-9">
+      <div className="relative z-20 mx-auto -mt-12 max-w-3xl rounded-[2rem] border border-slate-200 bg-white/95 p-7 text-center shadow-xl backdrop-blur md:p-9 lg:-mt-28">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
           {active.label}
         </p>
