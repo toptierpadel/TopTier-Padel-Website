@@ -6,9 +6,9 @@ import { Reveal } from "@/components/Reveal";
 import { SportsClubFan } from "@/components/SportsClubFan";
 
 export const metadata = {
-  title: "Sports Clubs | TopTier Padel",
+  title: "Padel for Sports Clubs UK | TopTier Padel",
   description:
-    "TopTier Padel helps sports clubs add fully funded, professionally managed padel facilities for members and local players.",
+    "Unlock new revenue and members with premium padel courts for sports clubs in the UK. Fully funded and operated by TopTier Padel.",
 };
 
 const clubUseMoments = [

@@ -4,9 +4,12 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Top-Tier Padel | Padel Courts for Education & Sport",
+  title: "TopTier Padel | Padel Courts for Education & Sport",
   description:
-    "Top-Tier Padel helps schools, universities and sports clubs fund, construct, and manage high-quality padel facilities.",
+    "TopTier Padel helps schools, universities and sports clubs fund, construct, and manage high-quality padel facilities.",
+  openGraph: {
+    siteName: "TopTier Padel",
+  },
 };
 
 export const viewport = {
@@ -21,6 +24,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "TopTier Padel",
+              "url": "https://top-tierpadel.com",
+            }),
+          }}
+        />
+      </head>
       <body>
         <Navbar />
         <main>{children}</main>

@@ -3,9 +3,9 @@ import { Reveal } from "@/components/Reveal";
 import { SchoolsFan } from "@/components/SchoolsFan";
 
 export const metadata = {
-  title: "Schools & Universities | TopTier Padel",
+  title: "Padel for Schools & Universities UK | TopTier Padel",
   description:
-    "TopTier Padel helps schools and universities bring fully funded, professionally managed padel facilities to campus.",
+    "TopTier Padel provides fully funded, professionally managed padel tennis courts and facilities for schools and universities across the UK.",
 };
 
 export default function SchoolsPage() {
