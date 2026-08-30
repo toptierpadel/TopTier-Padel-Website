@@ -156,7 +156,7 @@ export function Navbar() {
                 : "bg-slate-950 text-white"
             }`}
           >
-            <div className="flex flex-col gap-6 pt-8">
+            <div className="flex-1 flex flex-col justify-between pt-8 pb-12">
               <Link
                 href="/model"
                 className="text-2xl font-bold transition hover:text-[#0077C8]"
