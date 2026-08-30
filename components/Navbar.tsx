@@ -20,6 +20,17 @@ export function Navbar() {
     setIsOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const lightBackgroundPages = [
     "/model",
     "/schools",
@@ -150,7 +161,7 @@ export function Navbar() {
         {/* Mobile Menu Overlay */}
         {isOpen && (
           <div
-            className={`fixed inset-0 z-40 flex flex-col p-6 pt-64 md:hidden transition-all duration-350 ${
+            className={`fixed inset-0 z-40 flex flex-col p-6 pt-40 md:hidden transition-all duration-350 ${
               isLightBackgroundPage
                 ? "bg-white text-slate-950"
                 : "bg-slate-950 text-white"
