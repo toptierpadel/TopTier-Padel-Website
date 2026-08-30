@@ -9,6 +9,21 @@ export const metadata: Metadata = {
     "TopTier Padel helps schools, universities and sports clubs fund, construct, and manage high-quality padel facilities.",
   openGraph: {
     siteName: "TopTier Padel",
+    title: "TopTier Padel | Padel Courts for Education & Sport",
+    description: "TopTier Padel helps schools, universities and sports clubs fund, construct, and manage high-quality padel facilities.",
+    url: "https://top-tierpadel.com",
+    images: [
+      {
+        url: "https://top-tierpadel.com/images/toptier-logo-black.png",
+        alt: "TopTier Padel Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "TopTier Padel | Padel Courts for Education & Sport",
+    description: "TopTier Padel helps schools, universities and sports clubs fund, construct, and manage high-quality padel facilities.",
+    images: ["https://top-tierpadel.com/images/toptier-logo-black.png"],
   },
 };
 
