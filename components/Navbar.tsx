@@ -54,7 +54,7 @@ export function Navbar() {
   return (
     <header className="absolute left-0 top-0 z-50 w-full">
       <Container>
-        <nav className="flex h-36 items-center justify-between">
+        <nav className="relative z-50 flex h-36 items-center justify-between">
           <Link href="/" className="flex items-center pt-6">
             <Image
               src={
