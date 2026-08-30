@@ -241,7 +241,7 @@ export default function HomePage() {
                         <div className="mt-8">
                           <a
                             href={audience.href}
-                            className="inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
+                            className="flex w-full items-center justify-center rounded-full bg-slate-950 px-5 py-4 text-sm font-bold text-white transition hover:bg-slate-800 sm:w-auto sm:inline-flex sm:py-3"
                           >
                             {audience.cta}
                           </a>
