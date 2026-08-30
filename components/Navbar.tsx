@@ -150,7 +150,7 @@ export function Navbar() {
         {/* Mobile Menu Overlay */}
         {isOpen && (
           <div
-            className={`fixed inset-0 z-40 flex flex-col p-6 pt-36 md:hidden transition-all duration-350 ${
+            className={`fixed inset-0 z-40 flex flex-col p-6 pt-56 md:hidden transition-all duration-350 ${
               isLightBackgroundPage
                 ? "bg-white text-slate-950"
                 : "bg-slate-950 text-white"
