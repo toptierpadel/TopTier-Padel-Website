@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const reasons = [
   {
@@ -67,11 +68,8 @@ export function SportsClubFan() {
           const isActive = activeIndex === index;
 
           return (
-            <button
+            <motion.div
               key={reason.label}
-              onMouseEnter={() => setActiveIndex(index)}
-              onFocus={() => setActiveIndex(index)}
-              onClick={() => setActiveIndex(index)}
               className={`relative mx-auto h-[22rem] w-[16rem] overflow-hidden rounded-[2rem] text-left shadow-2xl transition-all duration-300 ease-out md:h-[25rem] md:w-[18rem] lg:absolute lg:left-1/2 lg:-translate-x-1/2 ${
                 cardPositions[index]
               } ${
@@ -79,28 +77,49 @@ export function SportsClubFan() {
                   ? "z-50 scale-105 ring-4 ring-[#99CC33]/70 opacity-100"
                   : "scale-95 opacity-85 hover:opacity-100"
               } ${reason.bg} ${isActive ? "block" : "hidden lg:block"}`}
-              aria-label={reason.title}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.25}
+              onDragEnd={(event, info) => {
+                const swipeThreshold = 50;
+                if (info.offset.x < -swipeThreshold) {
+                  // Swiped left -> show next card
+                  setActiveIndex((prev) => (prev + 1) % reasons.length);
+                } else if (info.offset.x > swipeThreshold) {
+                  // Swiped right -> show previous card
+                  setActiveIndex((prev) => (prev - 1 + reasons.length) % reasons.length);
+                }
+              }}
             >
-              <Image
-                src={reason.image}
-                alt={reason.title}
-                fill
-                style={{ objectFit: "cover" }}
-                className="transition duration-700 group-hover:scale-105"
-              />
+              <button
+                onMouseEnter={() => setActiveIndex(index)}
+                onFocus={() => setActiveIndex(index)}
+                onClick={() => setActiveIndex(index)}
+                className="relative h-full w-full text-left focus:outline-none"
+                aria-label={reason.title}
+              >
+                <Image
+                  src={reason.image}
+                  alt={reason.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  className="transition duration-700 group-hover:scale-105"
+                  draggable={false}
+                />
 
-              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent pointer-events-none" />
 
-              <div className="absolute bottom-0 left-0 right-0 p-7 pb-9 text-white">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#99CC33]">
-                  {reason.label}
-                </p>
+                <div className="absolute bottom-0 left-0 right-0 p-7 pb-9 text-white pointer-events-none">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-[#99CC33]">
+                    {reason.label}
+                  </p>
 
-                <h3 className="mt-2 text-2xl font-black leading-8">
-                  {reason.title}
-                </h3>
-              </div>
-            </button>
+                  <h3 className="mt-2 text-2xl font-black leading-8">
+                    {reason.title}
+                  </h3>
+                </div>
+              </button>
+            </motion.div>
           );
         })}
       </div>
