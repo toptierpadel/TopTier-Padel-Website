@@ -60,7 +60,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-slate-950 pb-24 pt-36 text-white">
+      <section className="relative flex min-h-screen items-center overflow-hidden bg-slate-950 pb-24 pt-48 md:pt-36 text-white">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -74,16 +74,16 @@ export default function HomePage() {
 
         <Container>
           <div className="relative max-w-5xl">
-            <p className="mb-5 text-base font-semibold uppercase tracking-wide text-[#99CC33]">
+            <p className="mb-4 text-sm sm:text-base font-semibold uppercase tracking-wide text-[#99CC33]">
               Helping bring padel to local communities across the UK.
             </p>
 
-            <h1 className="text-[48px] font-bold leading-[1.05] tracking-tight md:text-[60px]">
+            <h1 className="text-[32px] sm:text-[44px] md:text-[60px] font-bold leading-[1.1] md:leading-[1.05] tracking-tight">
               Transform unused space into a professionally managed padel
               facility.
             </h1>
 
-            <p className="mt-7 max-w-3xl text-[20px] leading-9 text-white">
+            <p className="mt-6 max-w-3xl text-[18px] md:text-[20px] leading-8 md:leading-9 text-white/90">
               TopTier Padel funds, develops, and manages premium padel
               facilities for schools, universities, and sports clubs across the
               UK.
