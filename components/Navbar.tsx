@@ -156,7 +156,7 @@ export function Navbar() {
                 : "bg-slate-950 text-white"
             }`}
           >
-            <div className="flex-1 flex flex-col justify-between pt-8 pb-12">
+            <div className="flex-1 flex flex-col justify-between pt-8 pb-6">
               <Link
                 href="/model"
                 className="text-2xl font-bold transition hover:text-[#0077C8]"
@@ -168,7 +168,7 @@ export function Navbar() {
                 <span className="text-2xl font-bold">
                   Partner With Us
                 </span>
-                <div className="flex flex-col gap-3 pl-4 pt-1">
+                <div className="flex flex-col gap-4 pl-4 pt-1">
                   {partnerItems.map((item) => (
                     <Link
                       key={item.href}
