@@ -47,6 +47,10 @@ export function Navbar() {
     ? "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
     : "text-white/85 hover:bg-white/10 hover:text-white";
 
+  const subLinkClass = isLightBackgroundPage
+    ? "text-slate-500 hover:text-slate-800"
+    : "text-white/60 hover:text-white";
+
   return (
     <header className="absolute left-0 top-0 z-50 w-full">
       <Container>
@@ -146,10 +150,10 @@ export function Navbar() {
         {/* Mobile Menu Overlay */}
         {isOpen && (
           <div
-            className={`fixed inset-x-0 top-[9rem] bottom-0 z-40 flex flex-col p-6 md:hidden transition-all duration-350 ${
+            className={`fixed inset-0 z-40 flex flex-col p-6 pt-36 md:hidden transition-all duration-350 ${
               isLightBackgroundPage
-                ? "bg-white text-slate-950 border-t border-slate-100"
-                : "bg-slate-950 text-white border-t border-white/10"
+                ? "bg-white text-slate-950"
+                : "bg-slate-950 text-white"
             }`}
           >
             <div className="flex flex-col gap-6 pt-8">
@@ -161,18 +165,20 @@ export function Navbar() {
               </Link>
 
               <div className="flex flex-col gap-3">
-                <p className="text-sm font-semibold uppercase tracking-wider text-slate-400">
+                <span className="text-2xl font-bold">
                   Partner With Us
-                </p>
-                {partnerItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="pl-4 text-xl font-semibold transition hover:text-[#0077C8]"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                </span>
+                <div className="flex flex-col gap-3 pl-4 pt-1">
+                  {partnerItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`text-lg font-semibold transition ${subLinkClass}`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
 
               <Link
