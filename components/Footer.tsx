@@ -2,11 +2,11 @@ import Link from "next/link";
 import { Container } from "./Container";
 
 const pages = [
-  { label: "Our Model", href: "/model" },
-  { label: "Schools & Universities", href: "/schools" },
-  { label: "Sports Clubs", href: "/sports-clubs" },
-  { label: "FAQs", href: "/faqs" },
-  { label: "About Us", href: "/about-us" },
+  { label: "Our Model", href: "/model/" },
+  { label: "Schools & Universities", href: "/schools/" },
+  { label: "Sports Clubs", href: "/sports-clubs/" },
+  { label: "FAQs", href: "/faqs/" },
+  { label: "About Us", href: "/about-us/" },
 ];
 
 export function Footer() {

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
@@ -5,10 +6,13 @@ import { Reveal } from "@/components/Reveal";
 
 import { SportsClubFan } from "@/components/SportsClubFan";
 
-export const metadata = {
-  title: "Padel for Sports Clubs UK | TopTier Padel",
+export const metadata: Metadata = {
+  title: "Padel Courts for Sports Clubs — We Fund & Operate",
   description:
-    "Unlock new revenue and members with premium padel courts for sports clubs in the UK. Fully funded and operated by TopTier Padel.",
+    "Turn underused club land into padel courts at zero cost. We finance, build and run them; your members get priority access and your club gets a new revenue share.",
+  alternates: {
+    canonical: "/sports-clubs/",
+  },
 };
 
 const clubUseMoments = [
@@ -125,7 +129,7 @@ export default function SportsClubsPage() {
               <p className="mx-auto mt-8 text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
                 Interested in bringing padel to your club?{" "}
                 <a
-                  href="/contact"
+                  href="/contact/"
                   className="text-slate-950 underline decoration-slate-300 underline-offset-4 transition hover:text-[#0077C8] hover:decoration-[#0077C8]"
                 >
                   Get in touch

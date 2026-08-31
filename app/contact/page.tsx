@@ -1,11 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
-export const metadata = {
-  title: "Contact | TopTier Padel",
+export const metadata: Metadata = {
+  title: "Contact TopTier Padel — Discuss Your Site",
   description:
-    "Get in touch with TopTier Padel about schools, universities, sports clubs, host sites, partnerships, and padel facility opportunities.",
+    "Have land, a disused court or a sports strategy that needs a new option? Tell us about your site and we will assess whether padel works there.",
+  alternates: {
+    canonical: "/contact/",
+  },
 };
 
 const reasons = [

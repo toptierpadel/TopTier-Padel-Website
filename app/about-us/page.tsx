@@ -1,11 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
-export const metadata = {
-  title: "About Us | TopTier Padel",
+export const metadata: Metadata = {
+  title: "About TopTier Padel — Our Story & Team",
   description:
-    "Learn about TopTier Padel, our philosophy, story, and the team bringing professionally managed padel facilities to schools, universities, and sports clubs across the UK.",
+    "Founded to close the gap between padel's place in Spanish daily life and its absence from UK campuses. Meet the team building padel facilities across the UK.",
+  alternates: {
+    canonical: "/about-us/",
+  },
 };
 
 const team = [

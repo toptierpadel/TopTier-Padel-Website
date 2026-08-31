@@ -1,11 +1,15 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { ModelTransformation } from "@/components/ModelTransformation";
 
-export const metadata = {
-  title: "Our Model | TopTier Padel",
+export const metadata: Metadata = {
+  title: "How Our Padel Partnership Model Works",
   description:
-    "TopTier Padel funds, develops, manages, and maintains padel facilities for schools, universities, and sports clubs.",
+    "Lease, fund, build, operate, maintain. A step-by-step breakdown of the TopTier Padel partnership — who pays for what, who plays when, and how revenue is shared.",
+  alternates: {
+    canonical: "/model/",
+  },
 };
 
 export default function ModelPage() {

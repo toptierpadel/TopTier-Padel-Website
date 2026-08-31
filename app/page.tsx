@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Reveal } from "@/components/Reveal";
+
+export const metadata: Metadata = {
+  title: "Fully Funded Padel Courts for UK Schools & Clubs",
+  description:
+    "We fund, build and run padel courts at schools, universities and sports clubs across the UK — at no capital cost to you. See how the partnership works.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 const audiences = [
   {
@@ -16,7 +26,7 @@ const audiences = [
       "A new facility for students, staff, and local users",
       "Revenue participation with no capital investment required",
     ],
-    href: "/schools",
+    href: "/schools/",
     cta: "Explore education partnerships",
   },
   {
@@ -30,7 +40,7 @@ const audiences = [
       "Additional traffic for clubhouse and wider club activity",
       "Professional operation without the full development burden",
     ],
-    href: "/sports-clubs",
+    href: "/sports-clubs/",
     cta: "Explore sports club partnerships",
   },
 ];
@@ -91,13 +101,13 @@ export default function HomePage() {
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
-                href="/contact"
+                href="/contact/"
                 className="inline-flex items-center justify-center rounded-full bg-[#99CC33] px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-[#8abb2e]"
               >
                 Get in Touch
               </a>
 
-              <Button href="/model" variant="secondary">
+              <Button href="/model/" variant="secondary">
                 See How It Works
               </Button>
             </div>

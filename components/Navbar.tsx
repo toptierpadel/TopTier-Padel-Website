@@ -7,8 +7,8 @@ import { useState, useEffect } from "react";
 import { Container } from "./Container";
 
 const partnerItems = [
-  { label: "Schools & Universities", href: "/schools" },
-  { label: "Sports Clubs", href: "/sports-clubs" },
+  { label: "Schools & Universities", href: "/schools/" },
+  { label: "Sports Clubs", href: "/sports-clubs/" },
 ];
 
 export function Navbar() {
@@ -74,8 +74,8 @@ export function Navbar() {
                   : "/images/toptier-logo-white.png"
               }
               alt="TopTier Padel"
-              width={140}
-              height={90}
+              width={200}
+              height={128}
               priority
               className="h-32 w-auto"
             />
@@ -83,7 +83,7 @@ export function Navbar() {
 
           <div className="hidden items-center gap-10 md:flex">
             <Link
-              href="/model"
+              href="/model/"
               className={`text-lg font-semibold transition ${navTextClass}`}
             >
               Our Model
@@ -113,14 +113,14 @@ export function Navbar() {
             </div>
 
             <Link
-              href="/faqs"
+              href="/faqs/"
               className={`text-lg font-semibold transition ${navTextClass}`}
             >
               FAQs
             </Link>
 
             <Link
-              href="/about-us"
+              href="/about-us/"
               className={`text-lg font-semibold transition ${navTextClass}`}
             >
               About Us
@@ -129,7 +129,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-4">
             <Link
-              href="/contact"
+              href="/contact/"
               className={`rounded-full px-5 py-3 text-sm font-bold transition ${contactClass}`}
             >
               Contact
@@ -169,7 +169,7 @@ export function Navbar() {
           >
             <div className="flex-1 flex flex-col justify-between pt-8 pb-2">
               <Link
-                href="/model"
+                href="/model/"
                 className="text-2xl font-bold transition hover:text-[#0077C8]"
               >
                 Our Model
@@ -193,21 +193,21 @@ export function Navbar() {
               </div>
 
               <Link
-                href="/faqs"
+                href="/faqs/"
                 className="text-2xl font-bold transition hover:text-[#0077C8]"
               >
                 FAQs
               </Link>
 
               <Link
-                href="/about-us"
+                href="/about-us/"
                 className="text-2xl font-bold transition hover:text-[#0077C8]"
               >
                 About Us
               </Link>
 
               <Link
-                href="/contact"
+                href="/contact/"
                 className={`mt-6 inline-flex items-center justify-center rounded-full py-4 text-lg font-bold transition ${contactClass}`}
               >
                 Get in Touch

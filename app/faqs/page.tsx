@@ -1,10 +1,14 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
-export const metadata = {
-  title: "FAQs | TopTier Padel",
+export const metadata: Metadata = {
+  title: "Padel Partnership FAQs for Schools & Clubs",
   description:
-    "Answers to common questions about padel, TopTier Padel's model, host sites, access, operations, and partnerships.",
+    "Costs, space, planning, insurance, access, maintenance and lease terms — the questions schools, universities and clubs ask before partnering with TopTier Padel.",
+  alternates: {
+    canonical: "/faqs/",
+  },
 };
 
 const questions = [
@@ -113,6 +117,23 @@ const questions = [
 export default function FAQsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": questions.map((q) => ({
+              "@type": "Question",
+              "name": q.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": q.answer,
+              },
+            })),
+          }),
+        }}
+      />
       <section className="relative overflow-hidden bg-white pb-28 pt-48">
         {/* clean atmospheric background */}
         <div className="absolute left-[-12rem] top-[-8rem] h-[44rem] w-[44rem] rounded-full bg-[#99CC33]/16 blur-3xl" />

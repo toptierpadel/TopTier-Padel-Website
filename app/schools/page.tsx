@@ -1,11 +1,15 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { SchoolsFan } from "@/components/SchoolsFan";
 
-export const metadata = {
-  title: "Padel for Schools & Universities UK | TopTier Padel",
+export const metadata: Metadata = {
+  title: "Padel Courts for Schools — Zero Capital Cost",
   description:
-    "TopTier Padel provides fully funded, professionally managed padel tennis courts and facilities for schools and universities across the UK.",
+    "Bring padel to your school with no capital outlay. We fund, build, insure and manage the courts; pupils play free in curriculum hours. See how schools partner with us.",
+  alternates: {
+    canonical: "/schools/",
+  },
 };
 
 export default function SchoolsPage() {
@@ -108,7 +112,7 @@ export default function SchoolsPage() {
             <p className="mx-auto mt-8 text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
               Interested in bringing padel to your campus?{" "}
               <a
-                href="/contact"
+                href="/contact/"
                 className="text-slate-950 underline decoration-slate-300 underline-offset-4 transition hover:text-[#0077C8] hover:decoration-[#0077C8]"
               >
                 Get in touch
