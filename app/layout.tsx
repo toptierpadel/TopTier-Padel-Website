@@ -58,6 +58,10 @@ export default function RootLayout({
                   "@type": "WebSite",
                   "@id": "https://top-tierpadel.com/#website",
                   "name": "TopTier Padel",
+                  "alternateName": [
+                    "Top Tier Padel",
+                    "TopTier Padel Ltd"
+                  ],
                   "url": "https://top-tierpadel.com",
                 },
                 {
