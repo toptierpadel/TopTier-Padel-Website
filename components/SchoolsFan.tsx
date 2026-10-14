@@ -83,7 +83,7 @@ export function SchoolsFan() {
           return (
             <motion.div
               key={reason.label}
-              className={`relative mx-auto h-[22rem] w-[16rem] overflow-hidden rounded-[2rem] text-left shadow-2xl transition-all duration-300 ease-out md:h-[25rem] md:w-[18rem] lg:absolute lg:left-1/2 lg:-translate-x-1/2 ${
+              className={`relative mx-auto h-[22rem] w-[16rem] overflow-hidden rounded-[2rem] text-left shadow-2xl outline-offset-4 outline-[#0077C8] transition-all duration-300 ease-out has-[:focus-visible]:outline-3 md:h-[25rem] md:w-[18rem] lg:absolute lg:left-1/2 lg:-translate-x-1/2 ${
                 cardPositions[index]
               } ${
                 isActive
@@ -108,12 +108,14 @@ export function SchoolsFan() {
                 onMouseEnter={() => setActiveIndex(index)}
                 onFocus={() => setActiveIndex(index)}
                 onClick={() => setActiveIndex(index)}
+                aria-pressed={isActive}
+                // The card clips its overflow, so the focus ring is drawn on the card itself (has-[:focus-visible]).
                 className="relative h-full w-full text-left focus:outline-none"
-                aria-label={reason.title}
               >
+                {/* Decorative here: the button is named by its visible label and title. */}
                 <Image
                   src={reason.image}
-                  alt={reason.title}
+                  alt=""
                   fill
                   style={{ objectFit: "cover" }}
                   className="transition duration-700 group-hover:scale-105"
@@ -171,16 +173,22 @@ export function SchoolsFan() {
         </div>
       </motion.div>
 
-      <div className="relative z-40 mt-8 flex justify-center gap-2 lg:hidden">
+      <div className="relative z-40 mt-8 flex justify-center lg:hidden">
         {reasons.map((reason, index) => (
+          // 24px-high hit area around the small visible dot.
           <button
             key={reason.label}
             onClick={() => setActiveIndex(index)}
-            className={`h-2.5 rounded-full transition-all ${
-              activeIndex === index ? "w-10 bg-[#99CC33]" : "w-2.5 bg-slate-300"
-            }`}
+            className="flex h-6 min-w-6 items-center justify-center rounded-full px-1"
             aria-label={`Show ${reason.label}`}
-          />
+            aria-pressed={activeIndex === index}
+          >
+            <span
+              className={`h-2.5 rounded-full transition-all ${
+                activeIndex === index ? "w-10 bg-[#99CC33]" : "w-2.5 bg-slate-300"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>
