@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, breadcrumbs } from "../structured-data";
 import { openGraphBase } from "../shared-metadata";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function ModelPage() {
   return (
     <>
+      <JsonLd data={{ "@graph": [breadcrumbs("Our Model", "/model/")] }} />
       {/* Model Intro */}
       <section className="relative overflow-hidden bg-white pb-28 pt-48">
         {/* abstract model atmosphere */}

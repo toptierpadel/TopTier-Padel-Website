@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, breadcrumbs, padelService } from "../structured-data";
 import Link from "next/link";
 import { openGraphBase } from "../shared-metadata";
 import { Container } from "@/components/Container";
@@ -22,6 +23,18 @@ export const metadata: Metadata = {
 export default function SportsClubsPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@graph": [
+            breadcrumbs("Sports Clubs", "/sports-clubs/"),
+            padelService(
+              "/sports-clubs/",
+              "Sports clubs",
+              "Expand your club’s offering, attract new members, increase engagement, and create another revenue stream from underused space.",
+            ),
+          ],
+        }}
+      />
 
       {/* Club Advantage */}
       <section className="relative overflow-hidden bg-white pb-28 pt-48">

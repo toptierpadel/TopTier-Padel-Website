@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, breadcrumbs } from "../structured-data";
 import { openGraphBase } from "../shared-metadata";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
@@ -122,21 +123,19 @@ const questions = [
 export default function FAQsPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": questions.map((q) => ({
-              "@type": "Question",
-              "name": q.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": q.answer,
-              },
-            })),
-          }),
+      <JsonLd
+        data={{
+          "@graph": [
+            breadcrumbs("FAQs", "/faqs/"),
+            {
+              "@type": "FAQPage",
+              mainEntity: questions.map((q) => ({
+                "@type": "Question",
+                name: q.question,
+                acceptedAnswer: { "@type": "Answer", text: q.answer },
+              })),
+            },
+          ],
         }}
       />
       <section className="relative overflow-hidden bg-white pb-28 pt-48">

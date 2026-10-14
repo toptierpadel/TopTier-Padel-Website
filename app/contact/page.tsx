@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, breadcrumbs } from "../structured-data";
 import { openGraphBase } from "../shared-metadata";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
@@ -27,6 +28,7 @@ const reasons = [
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={{ "@graph": [breadcrumbs("Contact", "/contact/")] }} />
       <section className="relative overflow-hidden bg-white pb-28 pt-48">
         {/* subtle background atmosphere */}
         <div className="absolute left-[-12rem] top-[-10rem] h-[44rem] w-[44rem] rounded-full bg-[#99CC33]/14 blur-3xl" />

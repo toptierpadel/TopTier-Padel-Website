@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, siteGraph } from "./structured-data";
 import "./globals.css";
 import { openGraphBase, shareImage } from "./shared-metadata";
 import { Navbar } from "@/components/Navbar";
@@ -33,44 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "WebSite",
-                  "@id": "https://top-tierpadel.com/#website",
-                  "name": "TopTier Padel",
-                  "alternateName": [
-                    "Top Tier Padel",
-                    "TopTier Padel Ltd"
-                  ],
-                  "url": "https://top-tierpadel.com",
-                },
-                {
-                  "@type": "Organization",
-                  "@id": "https://top-tierpadel.com/#organization",
-                  "name": "TopTier Padel Ltd",
-                  "legalName": "TopTier Padel Ltd",
-                  "url": "https://top-tierpadel.com",
-                  "logo": "https://top-tierpadel.com/images/toptier-logo-black.png",
-                  "areaServed": "GB",
-                  "identifier": "15614210",
-                  "sameAs": [
-                    "https://www.linkedin.com/company/toptier-padel/"
-                  ],
-                  "contactPoint": {
-                    "@type": "ContactPoint",
-                    "contactType": "Customer Support",
-                    "email": "info@top-tierpadel.com"
-                  }
-                }
-              ]
-            }),
-          }}
-        />
+        <JsonLd data={siteGraph} />
       </head>
       <body>
         <a

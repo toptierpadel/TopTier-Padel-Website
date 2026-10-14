@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, breadcrumbs, padelService } from "../structured-data";
 import Link from "next/link";
 import { openGraphBase } from "../shared-metadata";
 import { Container } from "@/components/Container";
@@ -21,6 +22,18 @@ export const metadata: Metadata = {
 export default function SchoolsPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@graph": [
+            breadcrumbs("Schools & Universities", "/schools/"),
+            padelService(
+              "/schools/",
+              "Schools and universities",
+              "Bring a modern, accessible sport to campus while supporting student wellbeing, recreational opportunity, and community engagement.",
+            ),
+          ],
+        }}
+      />
       {/* Campus Advantage */}
       <section className="relative overflow-hidden bg-white pb-28 pt-48">
         {/* subtle background atmosphere */}

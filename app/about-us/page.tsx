@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { JsonLd, breadcrumbs, founderId, organizationId, siteUrl } from "../structured-data";
 import { openGraphBase } from "../shared-metadata";
 import Image from "next/image";
 import { Container } from "@/components/Container";
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 
 const team = [
   {
+    id: founderId,
     name: "Alejandro Pesquero",
     role: "Founder & CEO",
     image: "/images/Alejandro.jpg",
@@ -30,6 +32,7 @@ const team = [
     },
   },
   {
+    id: `${siteUrl}/about-us/#joe-booth`,
     name: "Joe Booth",
     role: "Director of Operations",
     image: "/images/Joe.JPG",
@@ -42,6 +45,22 @@ const team = [
 export default function AboutUsPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@graph": [
+            breadcrumbs("About Us", "/about-us/"),
+            ...team.map((person) => ({
+              "@type": "Person",
+              "@id": person.id,
+              name: person.name,
+              jobTitle: person.role,
+              image: `${siteUrl}${person.image}`,
+              worksFor: { "@id": organizationId },
+              ...("links" in person && person.links && { sameAs: [person.links.linkedin] }),
+            })),
+          ],
+        }}
+      />
       {/* Origin Story */}
       <section className="relative overflow-hidden bg-white pb-28 pt-48">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(153,204,51,0.16),transparent_28%),radial-gradient(circle_at_82%_18%,rgba(0,119,200,0.14),transparent_30%)]" />
