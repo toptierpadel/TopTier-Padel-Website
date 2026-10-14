@@ -13,3 +13,24 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* In the base layer so Tailwind utilities (e.g. focus:outline-none) can still override it. */
+@layer base {
+  /* One visible focus style for keyboard users. #0077C8 is >= 3:1 against both white and the dark ink. */
+  :focus-visible {
+    outline: 3px solid #0077C8;
+    outline-offset: 3px;
+  }
+
+  /* Start from the ring colour so the `transition` utility doesn't fade it in from the text colour. */
+  *,
+  ::before,
+  ::after {
+    outline-color: #0077C8;
+  }
+
+  /* Skip-link target: focusable so screen readers land on it, but no ring around the whole page. */
+  main:focus {
+    outline: none;
+  }
+}

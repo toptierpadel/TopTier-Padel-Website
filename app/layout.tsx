@@ -76,8 +76,16 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <a
+          href="#main"
+          className="sr-only rounded-full bg-white text-sm font-bold text-slate-950 shadow-xl focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:px-5 focus:py-3"
+        >
+          Skip to content
+        </a>
         <Navbar />
-        <main>{children}</main>
+        <main id="main" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
