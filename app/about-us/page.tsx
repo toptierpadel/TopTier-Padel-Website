@@ -69,8 +69,7 @@ export default function AboutUsPage() {
             </div>
           </Reveal>
 
-          {/* Height covers the two overlapping photo panels: Spain panel top (6rem) + its height (30rem) */}
-          <div className="relative mx-auto mt-20 max-w-6xl lg:h-[36rem]">
+          <div className="relative mx-auto mt-20 max-w-6xl lg:h-[66rem] xl:h-[62rem]">
             {/* UK panel */}
             <div className="lg:absolute lg:left-0 lg:top-0 lg:w-[62%] xl:w-[64%]">
               <Reveal delay={0.08}>
@@ -138,38 +137,38 @@ export default function AboutUsPage() {
                 </div>
               </Reveal>
             </div>
-          </div>
 
-          {/* Mission card */}
-          <div className="relative z-10 mx-auto mt-8 max-w-3xl lg:mt-20">
-            <Reveal delay={0.24}>
-              <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-2xl md:p-10">
-                <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
-                  The idea
-                </p>
-
-                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">
-                  Bring the best of both together.
-                </h2>
-
-                <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
-                  <p>
-                    That contrast is what sparked TopTier Padel. By partnering
-                    directly with schools, universities, and sports clubs, we
-                    set out to bring the energy of Spanish padel into UK
-                    institutions already primed for it.
+            {/* Mission card */}
+            <div className="relative z-10 mx-auto mt-8 max-w-3xl lg:absolute lg:left-1/2 lg:top-[41rem] lg:mt-0 lg:-translate-x-1/2">
+              <Reveal delay={0.24}>
+                <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-2xl md:p-10">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
+                    The idea
                   </p>
 
-                  <p>
-                    Our philosophy is simple: padel should be easy to access,
-                    easy to enjoy, and easy for host sites to offer. The host
-                    provides suitable space; TopTier Padel handles the
-                    funding, development, management, and maintenance behind
-                    the scenes.
-                  </p>
+                  <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">
+                    Bring the best of both together.
+                  </h2>
+
+                  <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
+                    <p>
+                      That contrast is what sparked TopTier Padel. By partnering
+                      directly with schools, universities, and sports clubs, we
+                      set out to bring the energy of Spanish padel into UK
+                      institutions already primed for it.
+                    </p>
+
+                    <p>
+                      Our philosophy is simple: padel should be easy to access,
+                      easy to enjoy, and easy for host sites to offer. The host
+                      provides suitable space; TopTier Padel handles the
+                      funding, development, management, and maintenance behind
+                      the scenes.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Reveal>
+              </Reveal>
+            </div>
           </div>
         </Container>
       </section>
