@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { useLayoutEffect, useRef, useState } from "react";
 
 type RevealProps = {
   children: React.ReactNode;
@@ -8,26 +8,49 @@ type RevealProps = {
   className?: string;
 };
 
+// Fades content up as it scrolls into view.
+// The server HTML is always fully visible: content on screen at load is never hidden
+// (so it paints immediately, without waiting for JavaScript), and only content that is
+// still below the fold when the page hydrates is hidden and then revealed.
 export function Reveal({ children, delay = 0, className = "" }: RevealProps) {
-  const shouldReduceMotion = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
+  const [state, setState] = useState<"static" | "hidden" | "shown">("static");
 
-  if (shouldReduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
+  useLayoutEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // No viewport yet (e.g. a hidden or prerendering tab): leave everything visible.
+    if (!window.innerHeight) return;
+    if (element.getBoundingClientRect().top < window.innerHeight) return;
+
+    setState("hidden");
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setState("shown");
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "0px 0px -10% 0px" },
+    );
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  const motionClass =
+    state === "static"
+      ? ""
+      : "transition-[opacity,transform] duration-[550ms] ease-[cubic-bezier(0.22,1,0.36,1)]";
+  const hiddenClass = state === "hidden" ? "translate-y-6 opacity-0" : "";
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{
-        duration: 0.55,
-        delay,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className={className}
+    <div
+      ref={ref}
+      className={`${className} ${motionClass} ${hiddenClass}`}
+      style={state === "shown" && delay ? { transitionDelay: `${delay}s` } : undefined}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
