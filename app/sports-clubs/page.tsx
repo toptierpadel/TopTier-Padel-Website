@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { openGraphBase } from "../shared-metadata";
-import Image from "next/image";
-import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
@@ -20,23 +18,6 @@ export const metadata: Metadata = {
     url: "/sports-clubs/",
   },
 };
-
-const clubUseMoments = [
-  "Member priority sessions",
-  "Club nights and mixed-level games",
-  "Junior and family play",
-  "Coaching and beginner introductions",
-  "Internal leagues and tournaments",
-  "Guest and local-player bookings outside member windows",
-];
-
-const topTierHandles = [
-  "Funding the facility",
-  "Coordinating court delivery",
-  "Booking and access systems",
-  "Maintenance and upkeep",
-  "Day-to-day facility management",
-];
 
 export default function SportsClubsPage() {
   return (
