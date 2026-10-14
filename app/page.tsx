@@ -27,6 +27,7 @@ const audiences = [
     title: "Schools & Universities",
     label: "For education",
     image: "/images/high-five.jpeg",
+    imageAlt: "Two players high-fiving on an indoor padel court",
     description:
       "Bring a modern, accessible sport to campus while supporting student wellbeing, recreational opportunity, and community engagement.",
     points: [
@@ -41,6 +42,7 @@ const audiences = [
     title: "Sports Clubs",
     label: "For clubs",
     image: "/images/doubles.jpeg",
+    imageAlt: "A doubles match on a padel court in front of a large crowd",
     description:
       "Expand your club’s offering, attract new members, increase engagement, and create another revenue stream from underused space.",
     points: [
@@ -224,7 +226,7 @@ export default function HomePage() {
                       <div className="relative h-[26rem] overflow-hidden">
                         <Image
                           src={audience.image}
-                          alt={audience.title}
+                          alt={audience.imageAlt}
                           fill
                           className="object-cover transition duration-700 group-hover:scale-105"
                         />

@@ -90,9 +90,10 @@ export function ModelTransformation() {
               }`}
             >
               <div className="relative h-[22rem] overflow-hidden bg-slate-950">
+                {/* Decorative here: the button is named by its visible stage and title. */}
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt=""
                   fill
                   className="object-cover transition duration-700 group-hover:scale-105"
                 />
