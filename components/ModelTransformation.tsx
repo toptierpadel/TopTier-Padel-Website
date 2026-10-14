@@ -111,7 +111,7 @@ export function ModelTransformation() {
               <div className="p-6">
                 <p
                   className={`text-sm font-semibold uppercase tracking-wide ${
-                    item.dark ? "text-white/45" : "text-[#0077C8]"
+                    item.dark ? "text-white/60" : "text-[#005A8D]"
                   }`}
                 >
                   {item.label}
@@ -141,7 +141,7 @@ export function ModelTransformation() {
       </div>
 
       <div className="relative z-30 mx-auto -mt-2 max-w-4xl rounded-[2rem] border border-slate-200 bg-white/95 p-7 text-center shadow-2xl backdrop-blur md:p-9 lg:-mt-8">
-        <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+        <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
           {active.stage}: {active.label}
         </p>
 

@@ -156,7 +156,7 @@ export default function FAQsPage() {
         <Container>
           <Reveal>
             <div className="relative mx-auto max-w-5xl text-center">
-              <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+              <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                 FAQs
               </p>
 
@@ -182,7 +182,7 @@ export default function FAQsPage() {
                   >
                     <summary className="flex cursor-pointer list-none items-start justify-between gap-8 py-8">
                       <div className="grid gap-5 md:grid-cols-[5rem_1fr]">
-                        <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                        <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                           {String(index + 1).padStart(2, "0")}
                         </p>
 
@@ -211,7 +211,7 @@ export default function FAQsPage() {
             <div className="mx-auto mt-24 max-w-3xl text-center">
               <div className="mx-auto h-px w-40 bg-slate-200" />
 
-              <p className="mt-8 text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+              <p className="mt-8 text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                 Missing anything?
               </p>
 

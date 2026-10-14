@@ -141,7 +141,7 @@ export default function HomePage() {
           <Container>
             <Reveal>
               <div className="relative mx-auto max-w-5xl text-center">
-                <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                   The Model
                 </p>
 
@@ -165,7 +165,7 @@ export default function HomePage() {
                       key={step.title}
                       className="grid gap-5 border-b border-slate-200 py-8 last:border-b-0 md:grid-cols-[5rem_1fr]"
                     >
-                      <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                      <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                         {step.number}
                       </p>
 
@@ -279,7 +279,7 @@ export default function HomePage() {
               <div className="relative mx-auto max-w-3xl text-center">
                 <div className="mx-auto h-px w-40 bg-slate-200" />
 
-                <p className="mt-8 text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                <p className="mt-8 text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                   Start the conversation
                 </p>
 

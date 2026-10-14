@@ -15,7 +15,7 @@ export default function NotFound() {
 
       <Container>
         <div className="relative mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+          <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
             404 — Page Not Found
           </p>
 

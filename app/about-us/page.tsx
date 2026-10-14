@@ -51,7 +51,7 @@ export default function AboutUsPage() {
         <Container>
           <Reveal>
             <div className="relative mx-auto max-w-5xl text-center">
-              <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+              <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                 About TopTier Padel
               </p>
 
@@ -144,7 +144,7 @@ export default function AboutUsPage() {
           <div className="relative z-10 mx-auto mt-8 max-w-3xl lg:mt-20">
             <Reveal delay={0.24}>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-2xl md:p-10">
-                <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                   The idea
                 </p>
 
@@ -179,7 +179,7 @@ export default function AboutUsPage() {
         <Container>
           <Reveal>
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+              <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                 The team
               </p>
 
@@ -213,7 +213,7 @@ export default function AboutUsPage() {
                   </div>
 
                   <div className="flex flex-col p-7">
-                    <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                    <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                       {person.role}
                     </p>
 

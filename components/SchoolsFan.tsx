@@ -154,7 +154,7 @@ export function SchoolsFan() {
           }
         }}
       >
-        <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+        <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
           {active.label}
         </p>
 

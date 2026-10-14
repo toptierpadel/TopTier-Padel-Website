@@ -40,7 +40,7 @@ export default function SchoolsPage() {
         <Container>
           <Reveal>
             <div className="relative mx-auto max-w-5xl text-center">
-              <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+              <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                 Schools & Universities
               </p>
 
@@ -64,7 +64,7 @@ export default function SchoolsPage() {
             <div className="relative mx-auto mt-24 max-w-4xl text-center">
               <div className="mx-auto h-px w-40 bg-slate-200" />
 
-              <p className="mt-8 text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+              <p className="mt-8 text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                 Designed around the institution
               </p>
 
@@ -114,7 +114,7 @@ export default function SchoolsPage() {
               campus activity.
             </p>
 
-            <p className="mx-auto mt-8 text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+            <p className="mx-auto mt-8 text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
               Interested in bringing padel to your campus?{" "}
               <a
                 href="/contact/"

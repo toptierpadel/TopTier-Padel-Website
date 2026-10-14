@@ -26,7 +26,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-white/40">
+            <p className="text-sm font-semibold uppercase tracking-wide text-white/60">
               Pages
             </p>
 
@@ -35,7 +35,7 @@ export function Footer() {
                 <Link
                   key={page.href}
                   href={page.href}
-                  className="text-sm font-medium text-white/65 transition hover:text-white"
+                  className="text-sm font-medium text-white/75 transition hover:text-white"
                 >
                   {page.label}
                 </Link>
@@ -44,26 +44,26 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-white/40">
+            <p className="text-sm font-semibold uppercase tracking-wide text-white/60">
               Contact
             </p>
 
             <div className="mt-5 space-y-3">
               <a
                 href="mailto:info@top-tierpadel.com"
-                className="block text-sm font-medium text-white/65 transition hover:text-white"
+                className="block text-sm font-medium text-white/75 transition hover:text-white"
               >
                 info@top-tierpadel.com
               </a>
 
-              <p className="max-w-xs text-sm leading-6 text-white/45">
+              <p className="max-w-xs text-sm leading-6 text-white/60">
                 For site reviews, partnership enquiries, and general questions.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 py-6 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-3 py-6 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} TopTier Padel. All rights reserved.</p>
 
           <p>Fully funded padel facilities for UK host sites.</p>

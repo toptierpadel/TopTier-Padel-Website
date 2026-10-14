@@ -35,7 +35,7 @@ export default function ModelPage() {
         <Container>
           <Reveal>
             <div className="relative mx-auto max-w-5xl text-center">
-              <p className="text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+              <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                 Our Model
               </p>
 
@@ -65,7 +65,7 @@ export default function ModelPage() {
                     <div className="h-8 w-px bg-gradient-to-b from-slate-300 to-transparent" />
                     </div>
 
-                    <p className="mt-6 text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                    <p className="mt-6 text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                     Before: underused space
                     </p>
 
@@ -84,7 +84,7 @@ export default function ModelPage() {
                     <div className="h-8 w-px bg-gradient-to-b from-slate-300 to-transparent" />
                     </div>
 
-                    <p className="mt-6 text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                    <p className="mt-6 text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                     During: TopTier delivery
                     </p>
 
@@ -103,7 +103,7 @@ export default function ModelPage() {
                     <div className="h-8 w-px bg-gradient-to-b from-slate-300 to-transparent" />
                     </div>
 
-                    <p className="mt-6 text-sm font-semibold uppercase tracking-wide text-[#0077C8]">
+                    <p className="mt-6 text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                     After: managed facility
                     </p>
 
