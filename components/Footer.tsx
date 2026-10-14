@@ -30,7 +30,7 @@ export function Footer() {
               Pages
             </p>
 
-            <nav className="mt-5 grid gap-3">
+            <nav aria-label="Footer" className="mt-5 grid gap-3">
               {pages.map((page) => (
                 <Link
                   key={page.href}
