@@ -18,9 +18,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [shareImage],
   },
-  alternates: {
-    canonical: "/",
-  },
 };
 
 export const viewport = {
