@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { openGraphBase } from "./shared-metadata";
+import { openGraphBase, shareImage } from "./shared-metadata";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   openGraph: openGraphBase,
   // Title and description fall back to each page's own values.
   twitter: {
-    card: "summary",
-    images: ["/images/toptier-logo-black.png"],
+    card: "summary_large_image",
+    images: [shareImage],
   },
   alternates: {
     canonical: "/",
