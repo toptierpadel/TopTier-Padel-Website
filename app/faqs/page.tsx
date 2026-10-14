@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { openGraphBase } from "../shared-metadata";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
@@ -8,6 +9,10 @@ export const metadata: Metadata = {
     "Costs, space, planning, insurance, access, maintenance and lease terms — the questions schools, universities and clubs ask before partnering with TopTier Padel.",
   alternates: {
     canonical: "/faqs/",
+  },
+  openGraph: {
+    ...openGraphBase,
+    url: "/faqs/",
   },
 };
 

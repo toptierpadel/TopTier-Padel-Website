@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { openGraphBase } from "../shared-metadata";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { ModelTransformation } from "@/components/ModelTransformation";
@@ -9,6 +10,10 @@ export const metadata: Metadata = {
     "Lease, fund, build, operate, maintain. A step-by-step breakdown of the TopTier Padel partnership — who pays for what, who plays when, and how revenue is shared.",
   alternates: {
     canonical: "/model/",
+  },
+  openGraph: {
+    ...openGraphBase,
+    url: "/model/",
   },
 };
 

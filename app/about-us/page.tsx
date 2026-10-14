@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { openGraphBase } from "../shared-metadata";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
@@ -9,6 +10,10 @@ export const metadata: Metadata = {
     "Founded to close the gap between padel's place in Spanish daily life and its absence from UK campuses. Meet the team building padel facilities across the UK.",
   alternates: {
     canonical: "/about-us/",
+  },
+  openGraph: {
+    ...openGraphBase,
+    url: "/about-us/",
   },
 };
 

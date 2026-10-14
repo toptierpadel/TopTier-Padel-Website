@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { openGraphBase } from "../shared-metadata";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
@@ -9,6 +10,10 @@ export const metadata: Metadata = {
     "Have land, a disused court or a sports strategy that needs a new option? Tell us about your site and we will assess whether padel works there.",
   alternates: {
     canonical: "/contact/",
+  },
+  openGraph: {
+    ...openGraphBase,
+    url: "/contact/",
   },
 };
 

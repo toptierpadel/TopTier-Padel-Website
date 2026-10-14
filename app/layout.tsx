@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { openGraphBase } from "./shared-metadata";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
@@ -11,23 +12,10 @@ export const metadata: Metadata = {
   },
   description:
     "We fund, build and run padel courts at schools, universities and sports clubs across the UK — at no capital cost to you. See how the partnership works.",
-  openGraph: {
-    siteName: "TopTier Padel",
-    locale: "en_GB",
-    type: "website",
-    url: "https://top-tierpadel.com",
-    images: [
-      {
-        url: "/images/toptier-logo-black.png",
-        alt: "TopTier Padel Logo",
-      },
-    ],
-  },
+  openGraph: openGraphBase,
+  // Title and description fall back to each page's own values.
   twitter: {
     card: "summary",
-    title: "Fully Funded Padel Courts for UK Schools & Clubs | TopTier Padel",
-    description:
-      "We fund, build and run padel courts at schools, universities and sports clubs across the UK — at no capital cost to you.",
     images: ["/images/toptier-logo-black.png"],
   },
   alternates: {
