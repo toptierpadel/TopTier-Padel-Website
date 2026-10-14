@@ -7,7 +7,9 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Fully Funded Padel Courts for UK Schools & Clubs",
+  title: {
+    absolute: "Fully Funded Padel Courts for UK Schools & Clubs | TopTier Padel",
+  },
   description:
     "We fund, build and run padel courts at schools, universities and sports clubs across the UK — at no capital cost to you. See how the partnership works.",
   alternates: {

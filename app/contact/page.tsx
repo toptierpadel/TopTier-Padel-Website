@@ -5,7 +5,7 @@ import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Contact TopTier Padel — Discuss Your Site",
+  title: "Contact Us — Discuss Your Site",
   description:
     "Have land, a disused court or a sports strategy that needs a new option? Tell us about your site and we will assess whether padel works there.",
   alternates: {
