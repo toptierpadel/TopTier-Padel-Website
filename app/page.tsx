@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { openGraphBase } from "./shared-metadata";
 import Image from "next/image";
 import { Button } from "@/components/Button";
@@ -107,12 +108,12 @@ export default function HomePage() {
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a
+              <Link
                 href="/contact/"
                 className="inline-flex items-center justify-center rounded-full bg-[#99CC33] px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-[#8abb2e]"
               >
                 Get in Touch
-              </a>
+              </Link>
 
               <Button href="/model/" variant="secondary">
                 See How It Works
@@ -183,12 +184,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="mt-10 text-center">
-                  <a
-                    href="/model"
+                  <Link
+                    href="/model/"
                     className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
                   >
                     View our full model
-                  </a>
+                  </Link>
                 </div>
               </div>
             </Reveal>
@@ -256,12 +257,12 @@ export default function HomePage() {
                         </ul>
 
                         <div className="mt-8">
-                          <a
+                          <Link
                             href={audience.href}
                             className="block w-full text-center rounded-full bg-slate-950 px-5 py-4 text-sm font-bold text-white transition hover:bg-slate-800 sm:inline-block sm:w-auto sm:py-3"
                           >
                             {audience.cta}
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>

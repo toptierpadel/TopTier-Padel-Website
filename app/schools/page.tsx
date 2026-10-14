@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { openGraphBase } from "../shared-metadata";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
@@ -116,12 +117,12 @@ export default function SchoolsPage() {
 
             <p className="mx-auto mt-8 text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
               Interested in bringing padel to your campus?{" "}
-              <a
+              <Link
                 href="/contact/"
                 className="text-slate-950 underline decoration-slate-300 underline-offset-4 transition hover:text-[#0077C8] hover:decoration-[#0077C8]"
               >
                 Get in touch
-              </a>
+              </Link>
               .
             </p>
           </div>

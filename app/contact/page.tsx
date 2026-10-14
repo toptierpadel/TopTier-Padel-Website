@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { openGraphBase } from "../shared-metadata";
-import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
@@ -96,21 +95,21 @@ export default function ContactPage() {
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 xl:flex-row xl:items-center">
-                  <Link
+                  <a
                     href="mailto:info@top-tierpadel.com"
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
                   >
                     Email TopTier Padel
-                  </Link>
+                  </a>
 
-                  <Link
+                  <a
                     href="https://www.linkedin.com/company/toptier-padel/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[#0077C8] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#005A8D]"
                   >
                     Follow our progress on LinkedIn
-                  </Link>
+                  </a>
                 </div>
               </div>
 
