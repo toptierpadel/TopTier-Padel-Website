@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useSwipe } from "./useSwipe";
 
 const reasons = [
   {
@@ -55,6 +55,12 @@ export function SchoolsFan() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Swipe left for the next card, right for the previous one (touch layouts only).
+  const showNeighbour = (direction: 1 | -1) =>
+    setActiveIndex((prev) => (prev + direction + reasons.length) % reasons.length);
+  const cardSwipe = useSwipe(isMobile, showNeighbour);
+  const panelSwipe = useSwipe(isMobile, showNeighbour);
+
   const cardPositions = [
     "lg:left-[20%] lg:top-[26%] lg:-rotate-[10deg]",
     "lg:left-[38%] lg:top-[12%] lg:-rotate-[4deg]",
@@ -81,7 +87,7 @@ export function SchoolsFan() {
           const isActive = activeIndex === index;
 
           return (
-            <motion.div
+            <div
               key={reason.label}
               className={`relative mx-auto h-[22rem] w-[16rem] overflow-hidden rounded-[2rem] text-left shadow-2xl outline-offset-4 outline-[#0077C8] transition-all duration-300 ease-out has-[:focus-visible]:outline-3 md:h-[25rem] md:w-[18rem] lg:absolute lg:left-1/2 lg:-translate-x-1/2 ${
                 cardPositions[index]
@@ -90,19 +96,8 @@ export function SchoolsFan() {
                   ? "z-50 scale-105 ring-4 ring-[#99CC33]/70 opacity-100"
                   : "scale-95 opacity-85 hover:opacity-100"
               } ${reason.bg} ${isActive ? "block" : "hidden lg:block"}`}
-              drag={isMobile ? "x" : false}
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.25}
-              onDragEnd={(event, info) => {
-                const swipeThreshold = 50;
-                if (info.offset.x < -swipeThreshold) {
-                  // Swiped left -> show next card
-                  setActiveIndex((prev) => (prev + 1) % reasons.length);
-                } else if (info.offset.x > swipeThreshold) {
-                  // Swiped right -> show previous card
-                  setActiveIndex((prev) => (prev - 1 + reasons.length) % reasons.length);
-                }
-              }}
+              {...cardSwipe.handlers}
+              style={cardSwipe.style}
             >
               <button
                 onMouseEnter={() => setActiveIndex(index)}
@@ -135,27 +130,16 @@ export function SchoolsFan() {
                   </span>
                 </div>
               </button>
-            </motion.div>
+            </div>
           );
         })}
       </div>
 
       {/* active explanation */}
-      <motion.div
+      <div
         className="relative z-20 mx-auto -mt-12 max-w-3xl rounded-[2rem] border border-slate-200 bg-white/95 p-7 text-center shadow-xl backdrop-blur md:p-9 lg:-mt-28"
-        drag={isMobile ? "x" : false}
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0.25}
-        onDragEnd={(event, info) => {
-          const swipeThreshold = 50;
-          if (info.offset.x < -swipeThreshold) {
-            // Swiped left -> show next card
-            setActiveIndex((prev) => (prev + 1) % reasons.length);
-          } else if (info.offset.x > swipeThreshold) {
-            // Swiped right -> show previous card
-            setActiveIndex((prev) => (prev - 1 + reasons.length) % reasons.length);
-          }
-        }}
+        {...panelSwipe.handlers}
+        style={panelSwipe.style}
       >
         <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
           {active.label}
@@ -172,7 +156,7 @@ export function SchoolsFan() {
         <div className="mx-auto mt-6 inline-flex rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-[#99CC33]">
           {active.advantage}
         </div>
-      </motion.div>
+      </div>
 
       <div className="relative z-40 mt-8 flex justify-center lg:hidden">
         {reasons.map((reason, index) => (
