@@ -17,6 +17,8 @@ export function Navbar() {
   const [isPartnerOpen, setIsPartnerOpen] = useState(false);
   const partnerRef = useRef<HTMLDivElement>(null);
   const partnerButtonRef = useRef<HTMLButtonElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
   const normalizedPathname = pathname.replace(/\/$/, "") || "/";
 
   useEffect(() => {
@@ -36,14 +38,34 @@ export function Navbar() {
     return () => document.removeEventListener("pointerdown", handlePointerDown);
   }, [isPartnerOpen]);
 
+  // While the mobile menu is open: lock scroll, make the page behind it inert so focus
+  // stays in the header and menu, move focus into the menu, and close on Escape or when
+  // the viewport grows past the mobile breakpoint.
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
+    if (!isOpen) return;
+    const background = [document.querySelector("main"), document.querySelector("footer")];
+    document.body.style.overflow = "hidden";
+    background.forEach((element) => element?.setAttribute("inert", ""));
+    mobileMenuRef.current?.querySelector("a")?.focus();
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        menuButtonRef.current?.focus();
+      }
     }
+    const desktop = window.matchMedia("(min-width: 768px)");
+    function handleBreakpoint(event: MediaQueryListEvent) {
+      if (event.matches) setIsOpen(false);
+    }
+    document.addEventListener("keydown", handleKeyDown);
+    desktop.addEventListener("change", handleBreakpoint);
+
     return () => {
       document.body.style.overflow = "";
+      background.forEach((element) => element?.removeAttribute("inert"));
+      document.removeEventListener("keydown", handleKeyDown);
+      desktop.removeEventListener("change", handleBreakpoint);
     };
   }, [isOpen]);
 
@@ -190,6 +212,10 @@ export function Navbar() {
 
             {/* Mobile Hamburger Button */}
             <button
+              ref={menuButtonRef}
+              type="button"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
               onClick={() => setIsOpen(!isOpen)}
               className={`block md:hidden p-2 rounded-lg transition ${
                 isLightBackgroundPage
@@ -214,13 +240,18 @@ export function Navbar() {
         {/* Mobile Menu Overlay */}
         {isOpen && (
           <div
+            id="mobile-menu"
+            ref={mobileMenuRef}
             className={`fixed inset-0 z-40 flex flex-col p-6 pt-40 md:hidden transition-all duration-350 ${
               isLightBackgroundPage
                 ? "bg-white text-slate-950"
                 : "bg-slate-950 text-white"
             }`}
           >
-            <div className="flex-1 flex flex-col justify-between pt-8 pb-2">
+            <nav
+              aria-label="Main menu"
+              className="flex-1 flex flex-col justify-between pt-8 pb-2"
+            >
               <Link
                 href="/model/"
                 className="text-2xl font-bold transition hover:text-[#0077C8]"
@@ -265,7 +296,7 @@ export function Navbar() {
               >
                 Get in Touch
               </Link>
-            </div>
+            </nav>
           </div>
         )}
       </Container>
