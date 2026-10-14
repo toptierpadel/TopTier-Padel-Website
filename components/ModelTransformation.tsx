@@ -55,7 +55,8 @@ export function ModelTransformation() {
   function scrollToStage(targetId: string) {
     const element = document.getElementById(targetId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "center" });
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      element.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
     }
   }
 
