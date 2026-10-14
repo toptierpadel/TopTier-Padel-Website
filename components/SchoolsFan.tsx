@@ -115,6 +115,7 @@ export function SchoolsFan() {
                 {/* Decorative here: the button is named by its visible label and title. */}
                 <Image
                   src={reason.image}
+                  sizes="(min-width: 768px) 288px, 256px"
                   alt=""
                   fill
                   style={{ objectFit: "cover" }}

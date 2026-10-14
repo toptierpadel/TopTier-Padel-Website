@@ -93,6 +93,7 @@ export function ModelTransformation() {
                 {/* Decorative here: the button is named by its visible stage and title. */}
                 <Image
                   src={item.image}
+                  sizes="(min-width: 1024px) 384px, 100vw"
                   alt=""
                   fill
                   className="object-cover transition duration-700 group-hover:scale-105"

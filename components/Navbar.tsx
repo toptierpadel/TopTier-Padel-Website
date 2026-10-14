@@ -115,9 +115,10 @@ export function Navbar() {
                   : "/images/toptier-logo-white.png"
               }
               alt="TopTier Padel"
-              width={200}
+              // Source is 423x600; these match its ratio at the 128px display height.
+              width={90}
               height={128}
-              priority
+              loading="eager"
               className="h-32 w-auto"
             />
           </Link>

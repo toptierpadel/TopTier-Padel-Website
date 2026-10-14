@@ -77,6 +77,7 @@ export default function AboutUsPage() {
                   <div className="relative h-[34rem]">
                     <Image
                       src="/images/english-school.jpeg"
+                      sizes="(min-width: 1024px) 740px, 100vw"
                       alt="Red-brick school buildings with a clock tower beside a playing field"
                       fill
                       className="object-cover"
@@ -111,6 +112,7 @@ export default function AboutUsPage() {
                   <div className="relative h-[30rem]">
                     <Image
                       src="/images/spanish-padel.jpeg"
+                      sizes="(min-width: 1024px) 600px, 100vw"
                       alt="Aerial view of a doubles game on a blue padel court"
                       fill
                       className="object-cover"
@@ -203,6 +205,7 @@ export default function AboutUsPage() {
                   <div className="relative h-[26rem]">
                     <Image
                       src={person.image}
+                      sizes="(min-width: 768px) 448px, 100vw"
                       alt={`Portrait of ${person.name}`}
                       fill
                       className={`object-cover ${

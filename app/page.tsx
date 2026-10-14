@@ -81,11 +81,13 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-slate-950 pb-24 pt-48 md:pt-36 text-white">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/padel-hero.jpeg')",
-          }}
+        <Image
+          src="/images/padel-hero.jpeg"
+          alt=""
+          fill
+          preload
+          sizes="100vw"
+          className="object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-slate-950/50" />
@@ -228,6 +230,7 @@ export default function HomePage() {
                           src={audience.image}
                           alt={audience.imageAlt}
                           fill
+                          sizes="(min-width: 1280px) 600px, (min-width: 1024px) 50vw, 100vw"
                           className="object-cover transition duration-700 group-hover:scale-105"
                         />
 
