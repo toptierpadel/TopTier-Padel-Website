@@ -46,7 +46,7 @@ export default function ModelPage() {
               </h1>
 
               <p className="mx-auto mt-6 max-w-3xl text-xl leading-9 text-slate-600">
-                The host provides suitable space. TopTier funds, develops,
+                The host provides suitable space. TopTier Padel funds, develops,
                 manages, and maintains the facility — turning site potential
                 into a working padel operation.
               </p>
@@ -73,7 +73,7 @@ export default function ModelPage() {
 
                     <p className="mx-auto mt-4 max-w-2xl text-xl leading-9 text-slate-600">
                     The starting point is a site with real potential: suitable land,
-                    access, and an existing school, university, or club community. TopTier
+                    access, and an existing school, university, or club community. TopTier Padel
                     reviews whether that space can practically support padel, including
                     layout, access, likely use, and operational fit.
                     </p>
@@ -87,11 +87,11 @@ export default function ModelPage() {
                     </div>
 
                     <p className="mt-6 text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
-                    During: TopTier delivery
+                    During: TopTier Padel delivery
                     </p>
 
                     <p className="mx-auto mt-4 max-w-2xl text-xl leading-9 text-slate-600">
-                    TopTier then handles the work behind the project: funding, planning
+                    TopTier Padel then handles the work behind the project: funding, planning
                     coordination, court delivery, supplier management, booking setup,
                     access systems, and launch preparation. The host does not need to
                     become a specialist padel developer.
@@ -110,7 +110,7 @@ export default function ModelPage() {
                     </p>
 
                     <p className="mx-auto mt-4 max-w-2xl text-xl leading-9 text-slate-600">
-                    Once open, TopTier manages bookings, maintenance, upkeep, systems, and
+                    Once open, TopTier Padel manages bookings, maintenance, upkeep, systems, and
                     day-to-day operations. The host receives agreed access for its
                     community while the facility is professionally managed over time.
                     </p>
@@ -124,7 +124,7 @@ export default function ModelPage() {
                 <div className="mx-auto h-px w-32 bg-slate-200" />
 
                 <p className="mx-auto mt-8 max-w-3xl text-2xl font-black leading-10 tracking-tight text-slate-950 md:text-3xl">
-                The model is simple: the host provides the place, and TopTier makes the
+                The model is simple: the host provides the place, and TopTier Padel makes the
                 facility work.
                 </p>
 

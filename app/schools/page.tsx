@@ -106,7 +106,7 @@ export default function SchoolsPage() {
                 TopTier Padel builds the model around the institution. Student-priority access,
                 timetable windows, staff use, society bookings, community access, and
                 safeguarding requirements can all be structured around how the site already
-                operates. Toptier Padel handles the funding, development coordination, booking
+                operates. TopTier Padel handles the funding, development coordination, booking
                 systems, access setup, maintenance, and long-term management, so the school
                 or university can offer padel without needing to become a padel operator
                 itself.

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const reasons = [
   "You have available land or underused space",
-  "You want to better understand the TopTier partnership model",
+  "You want to better understand the TopTier Padel partnership model",
   "You represent a school, university, or sports club",
   "You have questions about access, operations, or maintenance",
   "You want to discuss whether padel could work at your site",
