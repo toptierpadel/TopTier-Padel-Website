@@ -161,7 +161,7 @@ export default function FAQsPage() {
               </p>
 
               <h1 className="mt-3 text-5xl font-black tracking-tight text-slate-950 md:text-6xl">
-                You've got questions. We have answers.
+                You&apos;ve got questions. We have answers.
               </h1>
 
               <p className="mx-auto mt-6 max-w-3xl text-xl leading-9 text-slate-600">

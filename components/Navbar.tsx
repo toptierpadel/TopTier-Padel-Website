@@ -21,10 +21,13 @@ export function Navbar() {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const normalizedPathname = pathname.replace(/\/$/, "") || "/";
 
-  useEffect(() => {
+  // Close both menus when the route changes (state adjusted during render, not in an effect).
+  const [menusPathname, setMenusPathname] = useState(pathname);
+  if (pathname !== menusPathname) {
+    setMenusPathname(pathname);
     setIsOpen(false);
     setIsPartnerOpen(false);
-  }, [pathname]);
+  }
 
   // Close the partner menu on a click outside it.
   useEffect(() => {
