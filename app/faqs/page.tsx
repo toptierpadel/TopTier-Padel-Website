@@ -138,7 +138,7 @@ export default function FAQsPage() {
           ],
         }}
       />
-      <section className="relative overflow-hidden bg-white pb-28 pt-48">
+      <section className="relative overflow-hidden bg-white pb-28 pt-36 md:pt-48">
         {/* clean atmospheric background */}
         <div className="absolute left-[-12rem] top-[-8rem] h-[44rem] w-[44rem] rounded-full bg-[#99CC33]/16 blur-3xl" />
 
@@ -185,7 +185,7 @@ export default function FAQsPage() {
                           {String(index + 1).padStart(2, "0")}
                         </p>
 
-                        <h2 className="text-3xl font-black tracking-tight text-slate-950 md:text-4xl">
+                        <h2 className="text-2xl font-black tracking-tight text-slate-950 md:text-4xl">
                           {item.question}
                         </h2>
                       </div>

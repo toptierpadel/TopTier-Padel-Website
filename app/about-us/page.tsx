@@ -62,7 +62,7 @@ export default function AboutUsPage() {
         }}
       />
       {/* Origin Story */}
-      <section className="relative overflow-hidden bg-white pb-28 pt-48">
+      <section className="relative overflow-hidden bg-white pb-12 pt-36 md:pb-28 md:pt-48">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(153,204,51,0.16),transparent_28%),radial-gradient(circle_at_82%_18%,rgba(0,119,200,0.14),transparent_30%)]" />
         <div className="absolute left-1/2 top-24 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full border border-slate-200/70" />
         <div className="absolute left-1/2 top-36 h-[24rem] w-[24rem] -translate-x-1/2 rounded-full border border-slate-200/70" />
@@ -195,7 +195,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Team */}
-      <section className="bg-white py-24">
+      <section className="bg-white pb-24 pt-12 md:py-24">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-4xl text-center">

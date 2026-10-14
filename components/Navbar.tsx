@@ -106,8 +106,8 @@ export function Navbar() {
   return (
     <header className="absolute left-0 top-0 z-50 w-full">
       <Container>
-        <nav aria-label="Main" className="relative z-50 flex h-36 items-center justify-between">
-          <Link href="/" className="flex items-center pt-6">
+        <nav aria-label="Main" className="relative z-50 flex h-24 items-center justify-between md:h-36">
+          <Link href="/" className="flex items-center pt-2 md:pt-6">
             <Image
               src={
                 isLightBackgroundPage
@@ -119,7 +119,7 @@ export function Navbar() {
               width={90}
               height={128}
               loading="eager"
-              className="h-32 w-auto"
+              className="h-20 w-auto md:h-32"
             />
           </Link>
 
@@ -246,7 +246,7 @@ export function Navbar() {
           <div
             id="mobile-menu"
             ref={mobileMenuRef}
-            className={`fixed inset-0 z-40 flex flex-col p-6 pt-40 md:hidden transition-all duration-350 ${
+            className={`fixed inset-0 z-40 flex flex-col p-6 pt-28 md:hidden transition-all duration-350 ${
               isLightBackgroundPage
                 ? "bg-white text-slate-950"
                 : "bg-slate-950 text-white"

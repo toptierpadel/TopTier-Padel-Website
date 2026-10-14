@@ -23,7 +23,7 @@ export default function ModelPage() {
     <>
       <JsonLd data={{ "@graph": [breadcrumbs("Our Model", "/model/")] }} />
       {/* Model Intro */}
-      <section className="relative overflow-hidden bg-white pb-28 pt-48">
+      <section className="relative overflow-hidden bg-white pb-28 pt-36 md:pt-48">
         {/* abstract model atmosphere */}
         <div className="absolute left-[-12rem] top-[-10rem] h-[44rem] w-[44rem] rounded-full bg-[#99CC33]/18 blur-3xl" />
         <div className="absolute right-[-14rem] top-10 h-[46rem] w-[46rem] rounded-full bg-[#0077C8]/16 blur-3xl" />

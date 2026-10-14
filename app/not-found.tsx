@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-white pb-24 pt-48">
+    <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-white pb-24 pt-36 md:pt-48">
       {/* soft atmosphere */}
       <div className="absolute left-[-10rem] top-[-8rem] h-[40rem] w-[40rem] rounded-full bg-[#99CC33]/12 blur-3xl" />
       <div className="absolute right-[-10rem] top-12 h-[42rem] w-[42rem] rounded-full bg-[#0077C8]/10 blur-3xl" />

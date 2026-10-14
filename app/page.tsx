@@ -80,7 +80,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-slate-950 pb-24 pt-48 md:pt-36 text-white">
+      <section className="relative flex min-h-screen items-center overflow-hidden bg-slate-950 pb-24 pt-32 md:pt-36 text-white">
         <Image
           src="/images/padel-hero.jpeg"
           alt=""

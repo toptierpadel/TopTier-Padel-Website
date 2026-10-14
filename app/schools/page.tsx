@@ -35,7 +35,7 @@ export default function SchoolsPage() {
         }}
       />
       {/* Campus Advantage */}
-      <section className="relative overflow-hidden bg-white pb-28 pt-48">
+      <section className="relative overflow-hidden bg-white pb-28 pt-36 md:pt-48">
         {/* subtle background atmosphere */}
         <div className="absolute left-[-10rem] top-[-8rem] h-[44rem] w-[44rem] rounded-full bg-[#0077C8]/10 blur-3xl" />
         <div className="absolute right-[-12rem] top-14 h-[46rem] w-[46rem] rounded-full bg-[#99CC33]/12 blur-3xl" />
