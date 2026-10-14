@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Container } from "./Container";
 
 const partnerItems = [
@@ -14,11 +14,27 @@ const partnerItems = [
 export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isPartnerOpen, setIsPartnerOpen] = useState(false);
+  const partnerRef = useRef<HTMLDivElement>(null);
+  const partnerButtonRef = useRef<HTMLButtonElement>(null);
   const normalizedPathname = pathname.replace(/\/$/, "") || "/";
 
   useEffect(() => {
     setIsOpen(false);
+    setIsPartnerOpen(false);
   }, [pathname]);
+
+  // Close the partner menu on a click outside it.
+  useEffect(() => {
+    if (!isPartnerOpen) return;
+    function handlePointerDown(event: PointerEvent) {
+      if (!partnerRef.current?.contains(event.target as Node)) {
+        setIsPartnerOpen(false);
+      }
+    }
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
+  }, [isPartnerOpen]);
 
   useEffect(() => {
     if (isOpen) {
@@ -89,26 +105,63 @@ export function Navbar() {
               Our Model
             </Link>
 
-            <div className="group relative">
+            <div
+              ref={partnerRef}
+              className="relative"
+              onMouseEnter={() => setIsPartnerOpen(true)}
+              onMouseLeave={() => setIsPartnerOpen(false)}
+              onBlur={(event) => {
+                if (!partnerRef.current?.contains(event.relatedTarget as Node)) {
+                  setIsPartnerOpen(false);
+                }
+              }}
+              onKeyDown={(event) => {
+                if (event.key === "Escape" && isPartnerOpen) {
+                  setIsPartnerOpen(false);
+                  partnerButtonRef.current?.focus();
+                }
+              }}
+            >
               <button
+                ref={partnerButtonRef}
+                type="button"
+                aria-expanded={isPartnerOpen}
+                aria-controls="partner-menu"
+                // Keyboard (detail 0) toggles; a pointer click always opens, since hover has usually opened it already.
+                onClick={(event) =>
+                  setIsPartnerOpen((open) => (event.detail === 0 ? !open : true))
+                }
                 className={`flex items-center gap-2 text-lg font-semibold transition ${navTextClass}`}
               >
                 Partner With Us
-                <span className="text-sm leading-none">▾</span>
+                <span
+                  aria-hidden="true"
+                  className={`text-sm leading-none transition ${isPartnerOpen ? "rotate-180" : ""}`}
+                >
+                  ▾
+                </span>
               </button>
 
+              {/* pt-4 rather than mt-4 so the pointer can cross the gap without closing the menu */}
               <div
-                className={`invisible absolute left-1/2 top-full mt-4 w-72 -translate-x-1/2 translate-y-2 rounded-2xl border p-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ${dropdownClass}`}
+                id="partner-menu"
+                className={`absolute left-1/2 top-full w-72 -translate-x-1/2 pt-4 transition-all duration-200 ${
+                  isPartnerOpen
+                    ? "visible translate-y-0 opacity-100"
+                    : "invisible translate-y-2 opacity-0"
+                }`}
               >
-                {partnerItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`block rounded-xl px-4 py-3 text-base font-semibold transition ${dropdownItemClass}`}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                <div className={`rounded-2xl border p-3 ${dropdownClass}`}>
+                  {partnerItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`block rounded-xl px-4 py-3 text-base font-semibold transition ${dropdownItemClass}`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
 
