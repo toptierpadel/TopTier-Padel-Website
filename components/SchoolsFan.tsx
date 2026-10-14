@@ -129,9 +129,9 @@ export function SchoolsFan() {
                     {reason.label}
                   </p>
 
-                  <h3 className="mt-2 text-2xl font-black leading-8">
+                  <span className="mt-2 block text-2xl font-black leading-8">
                     {reason.title}
-                  </h3>
+                  </span>
                 </div>
               </button>
             </motion.div>
@@ -160,9 +160,9 @@ export function SchoolsFan() {
           {active.label}
         </p>
 
-        <h3 className="mt-3 text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
+        <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
           {active.title}
-        </h3>
+        </h2>
 
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
           {active.description}

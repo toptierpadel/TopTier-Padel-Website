@@ -91,9 +91,9 @@ export default function AboutUsPage() {
                         UK schools & clubs
                       </p>
 
-                      <h3 className="mt-3 text-4xl font-bold tracking-tight">
+                      <h2 className="mt-3 text-4xl font-bold tracking-tight">
                         Sports culture. No padel.
-                      </h3>
+                      </h2>
 
                       <p className="mt-4 text-lg leading-8 text-white/75">
                         Facilities, land, and sporting communities already
@@ -125,9 +125,9 @@ export default function AboutUsPage() {
                         Spain
                       </p>
 
-                      <h3 className="mt-3 text-4xl font-bold tracking-tight">
+                      <h2 className="mt-3 text-4xl font-bold tracking-tight">
                         Padel as part of everyday life.
-                      </h3>
+                      </h2>
 
                       <p className="mt-4 text-lg leading-8 text-white/75">
                         A beloved sport baked into friendships, families, clubs,
@@ -148,9 +148,9 @@ export default function AboutUsPage() {
                   The idea
                 </p>
 
-                <h3 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">
+                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">
                   Bring the best of both together.
-                </h3>
+                </h2>
 
                 <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
                   <p>

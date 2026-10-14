@@ -15,9 +15,9 @@ export function Footer() {
       <Container>
         <div className="grid gap-12 border-b border-white/10 py-14 md:grid-cols-[1.2fr_0.7fr_0.9fr]">
           <div>
-            <h2 className="text-xl font-bold tracking-tight text-white">
+            <p className="text-xl font-bold tracking-tight text-white">
               TopTier Padel
-            </h2>
+            </p>
 
             <p className="mt-4 max-w-xl text-base leading-7 text-white/60">
               Building the next generation of padel facilities for schools,

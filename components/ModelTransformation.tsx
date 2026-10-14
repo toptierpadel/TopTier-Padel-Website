@@ -102,9 +102,9 @@ export function ModelTransformation() {
                   <p className="text-sm font-semibold uppercase tracking-wide text-[#99CC33]">
                     {item.stage}
                   </p>
-                  <h3 className="mt-2 text-3xl font-black tracking-tight text-white">
+                  <span className="mt-2 block text-3xl font-black tracking-tight text-white">
                     {item.title}
-                  </h3>
+                  </span>
                 </div>
               </div>
 
@@ -145,9 +145,9 @@ export function ModelTransformation() {
           {active.stage}: {active.label}
         </p>
 
-        <h3 className="mt-3 text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
+        <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
           {active.title}
-        </h3>
+        </h2>
 
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
           {active.expandedDescription}

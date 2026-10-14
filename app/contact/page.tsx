@@ -58,9 +58,9 @@ export default function ContactPage() {
           <Reveal delay={0.12}>
             <div className="relative mx-auto mt-20 grid max-w-5xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
+                <h2 className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                   Get in touch if
-                </p>
+                </h2>
 
                 <div className="mt-6 border-y border-slate-200">
                   {reasons.map((reason) => (
@@ -78,9 +78,9 @@ export default function ContactPage() {
               </div>
 
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl md:p-10">
-                <p className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
+                <h2 className="text-sm font-semibold uppercase tracking-wide text-[#005A8D]">
                   Email
-                </p>
+                </h2>
 
                 <a
                   href="mailto:info@top-tierpadel.com"
