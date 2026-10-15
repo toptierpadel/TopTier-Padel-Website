@@ -21,7 +21,8 @@ export const siteGraph = {
       "@id": `${siteUrl}/#website`,
       name: "TopTier Padel",
       alternateName: ["Top Tier Padel", "TopTier Padel Ltd"],
-      url: siteUrl,
+      // Must match the homepage's canonical URL exactly (with trailing slash) for Google site names.
+      url: `${siteUrl}/`,
       publisher: { "@id": organizationId },
     },
     {
