@@ -71,6 +71,8 @@ export function ModelTransformation() {
           const isActive = index === activeIndex;
 
           return (
+            // flex-col: a <button> vertically centres its content, which left a white band above
+            // the image on cards shorter than the tallest one in the row.
             <button
               key={item.stage}
               onMouseEnter={() => setActiveIndex(index)}
@@ -79,7 +81,7 @@ export function ModelTransformation() {
                 setActiveIndex(index);
                 scrollToStage(item.targetId);
               }}
-              className={`group relative overflow-hidden rounded-[2.25rem] border text-left shadow-xl transition-all duration-300 ${
+              className={`group relative flex flex-col overflow-hidden rounded-[2.25rem] border text-left shadow-xl transition-all duration-300 ${
                 item.dark
                   ? "border-slate-950 bg-slate-950 text-white"
                   : "border-slate-200 bg-white text-slate-950"
@@ -113,7 +115,7 @@ export function ModelTransformation() {
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="flex-1 p-6">
                 <p
                   className={`text-sm font-semibold uppercase tracking-wide ${
                     item.dark ? "text-white/60" : "text-[#005A8D]"
